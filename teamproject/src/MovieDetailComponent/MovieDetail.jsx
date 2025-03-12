@@ -9,19 +9,17 @@ const MovieDetail = () => {
         const fetchMovieData = async () => {
             try {
                 const response = await axios.get(
-                    'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json',
+                    'http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json',
                     {
                         params: {
                             key: '9e037ee8fdf1169bb3f094f4112acfc1',
-                            targetDt: '20250228',
+                            movieCd: '20244821',
                         },
                     }
                 );
-                const movies = response.data.boxOfficeResult.weeklyBoxOfficeList;
-                if (movies.length > 0) {
-                    setMovieData(movies[0]);
-                    // 0 번째 데이터 가져오기 나중에 해당 영화클릭시 데이터 받아야함
-                }
+                const movieInfo = response.data.movieInfoResult.movieInfo;
+                setMovieData(movieInfo); // 요부분 이제 클릭한 영화 상세정보
+
             } catch (error) {
                 console.error('데이터 가져오기 실패:', error);
             }
@@ -31,8 +29,9 @@ const MovieDetail = () => {
     }, []);
 
     return <>
-        {movieData && <DetailMain movie={movieData} />
-        }</>;
+        {movieData && <DetailMain movie={movieData} />}
+
+    </>;
 };
 
 export default MovieDetail;
