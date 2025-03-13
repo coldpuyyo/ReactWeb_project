@@ -1,11 +1,10 @@
 import './App.css';
-import DetailMain from './DetailComponents/DetailMain';
+import MovieDetail from './MovieDetailComponent/MovieDetail'; // DetailMain 대신 MovieDetail 불러오기
+
 function App() {
   return (
     <>
-
-      <DetailMain/>
-
+      <MovieDetail />
     </>
   );
 }
