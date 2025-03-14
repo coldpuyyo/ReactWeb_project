@@ -1,0 +1,164 @@
+{
+    "gogiInfo": [
+        {
+            "id": 1,
+            "weight": 600,
+            "origin": "국내산 한우",
+            "price": 48000,
+            "part": "등심",
+            "usage": "스테이크",
+            "images": [
+                {
+                    "id": 201,
+                    "url": "https://example.com/images/hanwoo1-1.jpg"
+                },
+                {
+                    "id": 202,
+                    "url": "https://example.com/images/hanwoo1-2.jpg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "weight": 500,
+            "origin": "국내산 한우",
+            "price": 52000,
+            "part": "안심",
+            "usage": "스테이크",
+            "images": [
+                {
+                    "id": 203,
+                    "url": "https://example.com/images/hanwoo2-1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "weight": 700,
+            "origin": "국내산 한우",
+            "price": 45000,
+            "part": "목심",
+            "usage": "국거리",
+            "images": [
+                {
+                    "id": 204,
+                    "url": "https://example.com/images/hanwoo3-1.jpg"
+                },
+                {
+                    "id": 205,
+                    "url": "https://example.com/images/hanwoo3-2.jpg"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "weight": 450,
+            "origin": "국내산 한우",
+            "price": 48000,
+            "part": "갈비",
+            "usage": "구이",
+            "images": [
+                {
+                    "id": 206,
+                    "url": "https://example.com/images/hanwoo4-1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "weight": 550,
+            "origin": "국내산 한우",
+            "price": 51000,
+            "part": "채끝살",
+            "usage": "스테이크",
+            "images": [
+                {
+                    "id": 207,
+                    "url": "https://example.com/images/hanwoo5-1.jpg"
+                },
+                {
+                    "id": 208,
+                    "url": "https://example.com/images/hanwoo5-2.jpg"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "weight": 800,
+            "origin": "국내산 한우",
+            "price": 43000,
+            "part": "앞다리살",
+            "usage": "불고기",
+            "images": [
+                {
+                    "id": 209,
+                    "url": "https://example.com/images/hanwoo6-1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "weight": 400,
+            "origin": "국내산 한우",
+            "price": 42000,
+            "part": "양지",
+            "usage": "국거리",
+            "images": [
+                {
+                    "id": 210,
+                    "url": "https://example.com/images/hanwoo7-1.jpg"
+                },
+                {
+                    "id": 211,
+                    "url": "https://example.com/images/hanwoo7-2.jpg"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "weight": 750,
+            "origin": "국내산 한우",
+            "price": 49000,
+            "part": "차돌박이",
+            "usage": "구이",
+            "images": [
+                {
+                    "id": 212,
+                    "url": "https://example.com/images/hanwoo8-1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "weight": 650,
+            "origin": "국내산 한우",
+            "price": 47000,
+            "part": "우둔살",
+            "usage": "장조림",
+            "images": [
+                {
+                    "id": 213,
+                    "url": "https://example.com/images/hanwoo9-1.jpg"
+                },
+                {
+                    "id": 214,
+                    "url": "https://example.com/images/hanwoo9-2.jpg"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "weight": 500,
+            "origin": "국내산 한우",
+            "price": 44000,
+            "part": "사태",
+            "usage": "국거리",
+            "images": [
+                {
+                    "id": 215,
+                    "url": "https://example.com/images/hanwoo10-1.jpg"
+                }
+            ]
+        }
+    ]
+}

@@ -7,7 +7,7 @@ const DetailMain = () => {
     return (
         <DetailMainWrapper>
             <DetailContentWrapper>
-            <ImageSlider />
+                <ImageSlider />
                 <DetailInfo />
                 <DetailConContainer />
             </DetailContentWrapper>
