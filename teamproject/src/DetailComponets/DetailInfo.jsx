@@ -8,6 +8,7 @@ const ProductInfo = () => {
       <p>⭐ 1.0</p>
       <p>가격 : 300000 만원</p>
       <p>배송비: 35000 만원</p>
+      <p>중량 : </p>
     </InfoWrapper>
   );
 };
