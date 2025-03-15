@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
+  border-radius: 5px;
   background-color: antiquewhite;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
