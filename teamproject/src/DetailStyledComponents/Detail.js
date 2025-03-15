@@ -1,16 +1,5 @@
 import styled from 'styled-components';
 
-export const DetailMainWrapper = styled.div`
-  width: 1100px;
-  height: 90%;
-  text-align: center;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  padding-bottom: 50px;
-`;
-
 export const DetailContentWrapper = styled.div`
   display: grid;
   width: 100%;
