@@ -18,24 +18,24 @@ import Home from "./pages/Home";
 
 import React from "react";
 
-// const App = () => {
-//   return <Home />;
-// };
+const App = () => {
+  return <Home />;
+};
 
-// export default App;
-
-function App(){
-  return(
-
-    <>
-    <Router>
-      {/* <Header/> */}
-      <Routes>
-      <Route path="/" element={<Login />} />
-        <Route path = "/login_page" element ={<Login/>} />
-      </Routes>
-    </Router>
-    </>
-  );
-}
 export default App;
+
+// function App(){
+//   return(
+
+//     <>
+//     <Router>
+//       {/* <Header/> */}
+//       <Routes>
+//       <Route path="/" element={<Login />} />
+//         <Route path = "/login_page" element ={<Login/>} />
+//       </Routes>
+//     </Router>
+//     </>
+//   );
+// }
+// export default App;

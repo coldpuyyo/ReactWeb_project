@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
+  width: 1050px;
   border-radius: 5px;
   background-color: rgb(255, 45, 45);
   display: grid;
