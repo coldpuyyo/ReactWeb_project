@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 
 // function App() {
 //   return (
-<<<<<<< HEAD
 //     <>
     
 //       <DetailMain/>
@@ -16,23 +15,9 @@ import Home from "./pages/Home";
 // }
 // import React from "react";
 
-const App = () => {
-  return <Home />;
-};
-
-export default App;
-
-// function App(){
-//   return(
-
-=======
->>>>>>> kkm
-//     <>
-    
-//       <DetailMain/>
-//     </>
-//   );
-// }
+// const App = () => {
+//   return <Home />;
+// };
 
 // export default App;
 
