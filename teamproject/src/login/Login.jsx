@@ -51,11 +51,11 @@ const Login = () => {
     };
 
     return (
-        <LoginContainer>
+        <MainContainer>
             <HeaderWrapper>
                 <Header />
             </HeaderWrapper>
-            <MainContainer>
+            <LoginContainer>
                 <LoginBox>
                     <LoginTitle>LOGIN</LoginTitle>
                     <FormContainer onSubmit={handleLogin}>
@@ -76,7 +76,7 @@ const Login = () => {
                             />
                         </InputGroup>
 
-                        <LoginButton type="submit">로그인버튼</LoginButton>
+                        <LoginButton type="submit">로그인</LoginButton>
                     </FormContainer>
 
                     {loginCheck && <ErrorMessage>이메일 혹은 비밀번호가 틀렸습니다.</ErrorMessage>}
@@ -85,8 +85,8 @@ const Login = () => {
                         아직 회원이 아니신가요? <Link to="../signup/Signup">회원가입</Link>
                     </SignupLink>
                 </LoginBox>
-            </MainContainer>
-        </LoginContainer>
+            </LoginContainer>
+        </MainContainer>
     );
 };
 

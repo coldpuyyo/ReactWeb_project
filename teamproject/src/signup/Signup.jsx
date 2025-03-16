@@ -15,15 +15,11 @@ const Signup = () => {
   const handleSignup = async (event) => {
     event.preventDefault();
 
-    // 회원가입 처리 로직을 구현합니다.
-
-    // Check if passwords match
     if (password !== confirmPassword) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
 
-    // Create payload
     const payload = {
       email: email,
       password: password,
@@ -48,11 +44,9 @@ const Signup = () => {
       const data = await response.json();
 
       if (response.status === 201) {
-        // Redirect to login.html
         console.log("성공! 이메일주소: " + data.email);
-        navigate("/login"); // 로그인 성공시 홈으로 이동합니다.
+        navigate("/login");
       } else if (response.status === 400) {
-        // Handle error
         alert(`회원가입 실패: ${data.email}`);
       }
     } catch (error) {
