@@ -41,3 +41,9 @@ export const FooterInfo = styled.div`
     font-weight: bold; /* 볼드 처리 */
   }
 `;
+
+export const FooterWrapper = styled.div`
+  display: grid;
+  grid-row: 7;
+  grid-column: 2/6
+`;

@@ -5,34 +5,34 @@ import DetailMain from './DetailComponets/DetailMain';
 import Home from "./pages/Home";
 
 
-// function App() {
-//   return (
-//     <>
+function App() {
+  return (
+    <>
     
-//       <DetailMain/>
-//     </>
-//   );
-// }
+      <DetailMain/>
+    </>
+  );
+}
 // import React from "react";
 
 // const App = () => {
 //   return <Home />;
 // };
 
-// export default App;
-
-function App(){
-  return(
-
-    <>
-    <Router>
-      {/* <Header/> */}
-      <Routes>
-      <Route path="/" element={<Login />} />
-        <Route path = "/login_page" element ={<Login/>} />
-      </Routes>
-    </Router>
-    </>
-  );
-}
 export default App;
+
+// function App(){
+//   return(
+
+//     <>
+//     <Router>
+//       {/* <Header/> */}
+//       <Routes>
+//       <Route path="/" element={<Login />} />
+//         <Route path = "/login_page" element ={<Login/>} />
+//       </Routes>
+//     </Router>
+//     </>
+//   );
+// }
+// export default App;

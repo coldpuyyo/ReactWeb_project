@@ -2,28 +2,38 @@ import styled from 'styled-components';
 
 export const DetailContentWrapper = styled.div`
   display: grid;
-  width: 100%;
-  height: auto;
+  height: 600px;
   border: 2px solid black;
   border-radius: 10px;
-  grid-column: 1 / span 5;
-  grid-row: 2 / span 3;
+  grid-column: 3/5;
+  grid-row: 3/6;
   padding: 20px;
+`;
+
+export const Div1 = styled.div`
+  display: grid;
+  grid-row: 2;
+  grid-column: 3/5;
+  height: 200px;
+`;
+export const Div2 = styled.div`
+  display: grid;
+  grid-row: 6;
+  grid-column: 3/5;
+  height: 200px;
 `;
 
 export const SliderWrapper = styled.div`
   display: flex;
   justify-content: center;
-  border: 2px solid black;
-  border-radius: 10px;
   overflow: hidden;
   position: relative;
 `;
 
 export const SlideImage = styled.img`
-  width: 550px;
-  height: 400px;
-  margin: 20px 0px;
+  width: 600px;
+  height: 300px;
+  margin: auto;
   border: 1px white solid;
   border-radius: 30px;
   object-fit: cover;

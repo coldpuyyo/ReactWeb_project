@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.section`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1050;
   position: relative;
   display: flex;
   justify-content: center;
