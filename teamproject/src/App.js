@@ -1,27 +1,23 @@
-<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './login/Login';
-import './App.css';
 import DetailMain from './DetailComponets/DetailMain';
-
-
-function App() {
-  return (
-    <>
-    
-      <DetailMain/>
-    </>
-  );
-}
-=======
-import React from "react";
 import Home from "./pages/Home";
+
+
+// function App() {
+//   return (
+//     <>
+    
+//       <DetailMain/>
+//     </>
+//   );
+// }
+// import React from "react";
 
 const App = () => {
   return <Home />;
 };
->>>>>>> sih
 
 export default App;
 
