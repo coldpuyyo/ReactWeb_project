@@ -1,23 +1,32 @@
-import { DetailContentWrapper } from "../DetailStyledComponents/Detail";
+import { DetailContentWrapper, Div1, Div2 } from "../DetailStyledComponents/Detail";
 import DetailConContainer from "./DetailContainer";
 import ImageSlider from "./ImageSlider";
 import DetailInfo from "./DetailInfo";
 import { HeaderWrapper } from './../header/HeaderStyle';
 import Header from "../header/Header";
-import { LoginContainer } from "../login/LoginStyle";
+import { MainContainer } from "../login/LoginStyle";
+import Footer from './../components/Footer';
+import { FooterWrapper } from "../styles/FooterStyles";
 
 const DetailMain = () => {
     return (
-        <LoginContainer>
+        <MainContainer>
             <HeaderWrapper>
                 <Header />
             </HeaderWrapper>
+            <Div1/>
             <DetailContentWrapper>
                 <ImageSlider />
                 <DetailInfo />
                 <DetailConContainer />
             </DetailContentWrapper>
-        </LoginContainer>
+            <Div2/>
+            <FooterWrapper>
+
+                <Footer />
+            </FooterWrapper>
+
+        </MainContainer>
     );
 };
 

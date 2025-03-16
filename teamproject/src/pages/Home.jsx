@@ -1,4 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+import Header from "../header/Header";
+>>>>>>> main
 import Banner from "../components/Banner";
 import CategoryMenu from "../components/CategoryMenu";
 import NoticeBox from "../components/NoticeBox"
