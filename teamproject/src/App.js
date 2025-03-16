@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './login/Login';
@@ -13,6 +14,14 @@ function App() {
     </>
   );
 }
+=======
+import React from "react";
+import Home from "./pages/Home";
+
+const App = () => {
+  return <Home />;
+};
+>>>>>>> sih
 
 export default App;
 
