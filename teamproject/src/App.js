@@ -13,7 +13,10 @@ import Home from "./pages/Home";
 //     </>
 //   );
 // }
-// import React from "react";
+// export default App;
+
+
+import React from "react";
 
 const App = () => {
   return <Home />;
