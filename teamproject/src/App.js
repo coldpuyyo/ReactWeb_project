@@ -5,11 +5,10 @@ import DetailMain from './DetailComponets/DetailMain';
 import Home from "./pages/Home";
 
 
-function App() {
-  return (
-    <>
+// function App() {
+//   return (
+//     <>
     
-<<<<<<< HEAD
 //       <DetailMain/>
 //     </>
 //   );
@@ -28,23 +27,6 @@ export default App;
 // function App(){
 //   return(
 
-=======
-      <DetailMain/>
-    </>
-  );
-}
-// import React from "react";
-
-// const App = () => {
-//   return <Home />;
-// };
-
-export default App;
-
-// function App(){
-//   return(
-
->>>>>>> main
 //     <>
 //     <Router>
 //       {/* <Header/> */}
