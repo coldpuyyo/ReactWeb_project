@@ -2,13 +2,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './login/Login';
 import DetailMain from './DetailComponets/DetailMain';
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 
 
 // function App() {
 //   return (
 //     <>
-    
 //       <DetailMain/>
 //     </>
 //   );
