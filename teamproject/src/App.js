@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 
 // function App() {
 //   return (
+<<<<<<< HEAD
 //     <>
     
 //       <DetailMain/>
@@ -24,15 +25,29 @@ export default App;
 // function App(){
 //   return(
 
+=======
+>>>>>>> kkm
 //     <>
-//     <Router>
-//       {/* <Header/> */}
-//       <Routes>
-//       <Route path="/" element={<Login />} />
-//         <Route path = "/login_page" element ={<Login/>} />
-//       </Routes>
-//     </Router>
+    
+//       <DetailMain/>
 //     </>
 //   );
 // }
+
 // export default App;
+
+function App(){
+  return(
+
+    <>
+    <Router>
+      {/* <Header/> */}
+      <Routes>
+      <Route path="/" element={<Login />} />
+        <Route path = "/login_page" element ={<Login/>} />
+      </Routes>
+    </Router>
+    </>
+  );
+}
+export default App;

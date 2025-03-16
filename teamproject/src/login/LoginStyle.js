@@ -1,26 +1,29 @@
 import styled from "styled-components";
 
-export const LoginContainer = styled.div`
+export const MainContainer = styled.div`
   display: grid;
   grid-template-rows: repeat(7, 1fr);
   grid-template-columns: repeat(6, 1fr);
   height: 100vh;
-  background-color:rgb(209, 207, 207);
+  background-color:rgb(255, 255, 255);
 `;
 
-export const MainContainer = styled.div`
+export const LoginContainer = styled.div`
   display: grid;
   grid-row: 4;
   grid-column: 3/5;
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
 `;
 
 export const LoginBox = styled.div`
   display: grid;
+  grid-row: 4;
+  grid-column: 3/5;
   grid-template-rows: auto 1fr auto;
-  background-color: #e6e6e6;
+  background-color:rgb(247, 247, 247);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -28,7 +31,8 @@ export const LoginBox = styled.div`
 `;
 
 export const LoginTitle = styled.h1`
-  font-size: 22px;
+  color: red;
+  font-size: 24px;
   padding-bottom: 10px;
 `;
 
@@ -62,15 +66,16 @@ export const LoginButton = styled.button`
   margin-top: 25px;
   height: 80%;
   padding: 10px;
-  background-color: #007acc;
+  background-color:rgb(255, 0, 0);
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 
   &:hover {
-    background-color: #005b99;
+    background-color:rgb(187, 0, 0);
   }
 `;
 
@@ -87,7 +92,7 @@ export const SignupLink = styled.p`
   text-align: center;
 
   a {
-    color: #007acc;
+    color:rgb(255, 0, 0);
     text-decoration: none;
 
     &:hover {
