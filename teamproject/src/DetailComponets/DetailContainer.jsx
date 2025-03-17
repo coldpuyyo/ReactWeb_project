@@ -13,12 +13,10 @@ const DetailConContainer = () => {
     { title: "상품 정보", content: "제조사: 없음, 원산지: 브라질" }
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0); // 기본으로 첫 번째(상품 설명) 열림
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleDetailCon = (index) => {
-    if (activeIndex !== index) {
-      setActiveIndex(index);
-    }
+    setActiveIndex(index === activeIndex ? -1 : index);
   };
 
   return (
@@ -28,7 +26,7 @@ const DetailConContainer = () => {
           <DetailConTitle onClick={() => toggleDetailCon(index)}>
             {item.title}
           </DetailConTitle>
-          <DetailConContent isOpen={activeIndex === index}>
+          <DetailConContent data-isopen={activeIndex === index}> {/* ✅ React 경고 해결 */}
             {item.content}
           </DetailConContent>
         </DetailConItem>

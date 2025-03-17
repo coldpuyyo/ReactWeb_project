@@ -1,16 +1,23 @@
 import React from "react";
 import { InfoWrapper } from "../DetailStyledComponents/Detail";
 
-const ProductInfo = () => {
-  return (
-    <InfoWrapper>
-      <h2>조진고기</h2>
-      <p>⭐ 1.0</p>
-      <p>가격 : 300000 만원</p>
-      <p>배송비: 35000 만원</p>
-      <p>중량 : </p>
-    </InfoWrapper>
-  );
+const DetailInfo = ({ product }) => {
+    if (!product) {
+        return <p>해당 상품이 없습니다.</p>;
+    }
+
+    return (
+        <InfoWrapper>
+            <div>
+                <h2>{product.name}</h2>
+                <p>원산지: {product.origin}</p>
+                <p>무게: {product.weight}g</p>
+                <p>가격: {product.price}원</p>
+                <p>부위: {product.part}</p>
+                <p>사용법: {product.usage}</p>
+            </div>
+        </InfoWrapper>
+    );
 };
 
-export default ProductInfo;
+export default DetailInfo;

@@ -3,23 +3,24 @@ import './App.css';
 import Login from './login/Login';
 import DetailMain from './DetailComponets/DetailMain';
 import Home from "./pages/Home";
+import { GogiProvider } from './GogiContext/GogiContext';
 
 
 function App() {
   return (
     <>
-    
-      <DetailMain/>
+      <Router>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/detail/:id" element={<DetailMain />} />
+        </Routes>
+      </Router>
     </>
   );
 }
-// import React from "react";
-
-// const App = () => {
-//   return <Home />;
-// };
-
 export default App;
+
+
 
 // function App(){
 //   return(
