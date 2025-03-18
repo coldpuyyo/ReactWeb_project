@@ -12,6 +12,7 @@ export const LogoImage = styled.img`
     margin-left: 30px;
     width: 105px;
     height: 105px;
+    cursor: pointer;
 `
 export const CartImage = styled.img`
     float: right;

@@ -16,9 +16,9 @@ const DetailMain = () => {
     const [gogiData, setGogiData] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/gogiInfo")
+        axios.get("http://localhost:3000/gogiInfo")
             .then((response) => {
-                const product = response.data.find((item) => Number(item.id) === Number(id)); // ✅ 해당 상품만 찾기
+                const product = response.data.find((item) => Number(item.id) === Number(id));
                 setGogiData(product || null);
             })
             .catch((error) => {

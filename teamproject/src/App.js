@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/detail/:id" element={<DetailMain />} />
+          <Route path="/login_page" element={<Login />} />
         </Routes>
       </Router>
     </>
