@@ -3,11 +3,13 @@ import styled from 'styled-components';
 export const DetailContentWrapper = styled.div`
   display: grid;
   height: 600px;
-  border: 2px solid black;
+  border: 2px;
   border-radius: 10px;
   grid-column: 3/5;
   grid-row: 3/6;
   padding: 20px;
+  min-width: 500px;
+  background-color: rgb(247, 241, 239);
 `;
 
 export const Div1 = styled.div`
@@ -23,18 +25,14 @@ export const Div2 = styled.div`
   height: 200px;
 `;
 
-export const SliderWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
+export const ImageWrapper = styled.div`
+
 `;
 
 export const SlideImage = styled.img`
-  width: 600px;
-  height: 300px;
+  width: auto;
+  height: 200px;
   margin: auto;
-  border: 1px white solid;
   border-radius: 30px;
   object-fit: cover;
   transition: opacity 0.5s ease-in-out;
@@ -48,15 +46,19 @@ export const InfoWrapper = styled.div`
  display: grid;
  grid-template-columns: repeat(2,1fr);
   text-align: center;
-  margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
-
+  grid-template-areas: 
+  "name name";
 `;
 
 export const Goginame = styled.div`
-  grid-column: span 2;
+  grid-area: name;
+  font-style:italic;
 `;
+
+
+
 
 export const DetailConWrapper = styled.div`
   display: grid;

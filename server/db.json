@@ -9,6 +9,8 @@
             "price": 48000,
             "part": "등심",
             "usage": "스테이크",
+            "storage": "냉장",
+            "shippingFee": 3000,
             "images": [
                 {
                     "id": 201,
@@ -28,6 +30,8 @@
             "price": 52000,
             "part": "안심",
             "usage": "스테이크",
+            "storage": "냉장",
+            "shippingFee": 3500,
             "images": [
                 {
                     "id": 203,
@@ -43,6 +47,8 @@
             "price": 45000,
             "part": "사태",
             "usage": "요리용",
+            "storage": "냉장",
+            "shippingFee": 4000,
             "images": [
                 {
                     "id": 204,
@@ -62,6 +68,8 @@
             "price": 37000,
             "part": "등심",
             "usage": "구이용",
+            "storage": "냉장",
+            "shippingFee": 5000,
             "images": [
                 {
                     "id": 206,
@@ -77,6 +85,8 @@
             "price": 51000,
             "part": "채끝살",
             "usage": "스테이크",
+            "storage": "냉장",
+            "shippingFee": 3000,
             "images": [
                 {
                     "id": 207,
@@ -96,6 +106,8 @@
             "price": 68000,
             "part": "갈비",
             "usage": "구이용",
+            "storage": "냉장",
+            "shippingFee": 4500,
             "images": [
                 {
                     "id": 209,
@@ -111,6 +123,8 @@
             "price": 46000,
             "part": "갈비",
             "usage": "구이용",
+            "storage": "냉장",
+            "shippingFee": 3500,
             "images": [
                 {
                     "id": 210,
@@ -130,6 +144,8 @@
             "price": 49000,
             "part": "차돌박이",
             "usage": "구이",
+            "storage": "냉장",
+            "shippingFee": 4000,
             "images": [
                 {
                     "id": 212,
@@ -145,6 +161,8 @@
             "price": 47000,
             "part": "우둔살",
             "usage": "장조림",
+            "storage": "냉장",
+            "shippingFee": 3200,
             "images": [
                 {
                     "id": 213,
@@ -164,6 +182,8 @@
             "price": 44000,
             "part": "사태",
             "usage": "국거리",
+            "storage": "냉장",
+            "shippingFee": 3800,
             "images": [
                 {
                     "id": 215,

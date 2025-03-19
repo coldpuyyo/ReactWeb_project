@@ -2,23 +2,20 @@ import React from "react";
 import { InfoWrapper } from "../DetailStyledComponents/Detail";
 import { Goginame } from './../DetailStyledComponents/Detail';
 
-const DetailInfo = ({ product }) => {
-    if (!product) {
+const DetailInfo = ({ gogi }) => {
+    if (!gogi) {
         return <p>해당 상품이 없습니다.</p>;
     }
-
 
 
     return (
         <InfoWrapper>
             <Goginame>
-                <p>{product.name}</p>
+                <p>{gogi.name}</p>
             </Goginame>
-            <p>원산지: {product.origin}</p>
-            <p>무게: {product.weight}g</p>
-            <p>가격: {product.price}원</p>
-            <p>부위: {product.part}</p>
-            <p>사용법: {product.usage}</p>
+            <p>무게</p> <p>{gogi.weight}</p>
+            <p>가격</p><p>{gogi.price}원</p>
+            <p>배송비</p><p>{gogi.shippingFee}</p>
         </InfoWrapper>
     );
 };

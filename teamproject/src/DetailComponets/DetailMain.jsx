@@ -44,7 +44,7 @@ const DetailMain = () => {
 
                 <ImageSlider images={gogiData.images} />
 
-                <DetailInfo product={gogiData} />
+                <DetailInfo gogi={gogiData} />
 
                 <DetailConContainer />
 

@@ -6,23 +6,26 @@ import { useNavigate } from 'react-router-dom';
 function Header() {
     const navigate = useNavigate();
 
-    const handleClick = () => {
+    const goHome = () => {
         navigate('/home');
+    }
+    const goLogin = () => {
+        navigate('/login')
     }
 
     return (
         <>
             <div className="header__logo">
 
-                <LogoImage src={Logo} alt="로고" onClick={handleClick} />
+                <LogoImage src={Logo} alt="로고" onClick={goHome} />
 
             </div>
             <div />
             <div />
             <div />
-            <a href="/">
-                <CartImage src={Cart} alt="장바구니" />
-            </a>
+
+            <CartImage src={Cart} alt="장바구니" onClick={goLogin} />
+
         </>
     )
 }

@@ -26,7 +26,7 @@ const DetailConContainer = () => {
           <DetailConTitle onClick={() => toggleDetailCon(index)}>
             {item.title}
           </DetailConTitle>
-          <DetailConContent data-isopen={activeIndex === index}> {/* ✅ React 경고 해결 */}
+          <DetailConContent data-isopen={activeIndex === index}>
             {item.content}
           </DetailConContent>
         </DetailConItem>

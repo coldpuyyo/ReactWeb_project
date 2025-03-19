@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SliderWrapper, SlideImage } from "../DetailStyledComponents/Detail";
+import { ImageWrapper, SlideImage } from "../DetailStyledComponents/Detail";
 
 const ImageSlider = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,9 +22,10 @@ const ImageSlider = ({ images }) => {
     }
 
     return (
-        <SliderWrapper>
+        <ImageWrapper>
             <SlideImage className={fade ? "fade" : ""} src={images[currentIndex].url} alt={`Product ${currentIndex + 1}`} />
-        </SliderWrapper>
+        </ImageWrapper>
+
     );
 };
 
