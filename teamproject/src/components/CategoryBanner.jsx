@@ -11,8 +11,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 // 카테고리 배너 이미지 배열
 const categoryBannerImages = [
-  "https://placehold.co/600x200?text=Category+Banner+1",
-  "https://placehold.co/600x200?text=Category+Banner+2",
+  "https://cafe24.poxo.com/ec01/sop1004/BhNwo1jckXH28PSBZRxpvsZT7lpdP9y8k06zWfWfMHCfOMs2QQ2ofLqaFkfodd54ObIwVZrRuLnEVoHU43XCpw==/_/web/upload/category/mobile/shop1_105_top_420162.jpg",
+  "https://sitem.ssgcdn.com/04/32/79/item/1000591793204_i1_290.jpg",
   "https://placehold.co/600x200?text=Category+Banner+3",
 ];
 
@@ -20,7 +20,8 @@ const categoryBannerImages = [
 const CategoryBanner = () => {
   return (
     <CategoryBannerContainer>
-      <p>기획전</p> {/* 배너 제목 */}
+      <p>자체기획전</p> {/* 배너 제목 */}
+
       <Swiper
         modules={[Pagination, Autoplay]} // 사용할 Swiper 모듈
         pagination={{ clickable: true }} // 페이지네이션 설정

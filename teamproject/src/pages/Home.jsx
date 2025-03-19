@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner";
 import CategoryMenu from "../components/CategoryMenu";
+import NoticeBox from "../components/NoticeBox"
 import CategoryBanner from "../components/CategoryBanner";
 import ProductList from "../components/ProductList";
 import { PageContainer, ContentWrapper } from "../styles/commonStyles";
@@ -19,6 +20,7 @@ const Home = () => {
           <br/>
           <Banner />
           <CategoryMenu />
+          <NoticeBox />
           <CategoryBanner />
           <ProductList />
           <Footer />

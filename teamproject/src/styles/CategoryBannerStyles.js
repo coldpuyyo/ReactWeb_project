@@ -8,9 +8,11 @@ export const CategoryBannerContainer = styled.div`
   overflow: hidden;
 `;
 
+// export const SwiperContainer =
+
 export const CategoryBannerImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 200px;
   border-radius: 8px;
   object-fit: cover;
 `;

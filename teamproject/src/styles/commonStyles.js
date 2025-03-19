@@ -39,7 +39,7 @@ export const PageContainer = styled.div`
 /* 🏷️ 중앙 정렬된 콘텐츠 래퍼 (배너 크기 기준) */
 export const ContentWrapper = styled.div`
   width: 100%;
-  max-width: 1200px; /* 배너 크기 기준 */
+  max-width: 1050px; /* 배너 크기 기준 */
   display: flex;
   flex-direction: column; /* 세로 정렬 */
   align-items: center; /* 가운데 정렬 */
