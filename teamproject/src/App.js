@@ -3,7 +3,6 @@ import './App.css';
 import Login from './login/Login';
 import DetailMain from './DetailComponets/DetailMain';
 import Home from "./pages/Home";
-import { GogiProvider } from './GogiContext/GogiContext';
 
 
 function App() {

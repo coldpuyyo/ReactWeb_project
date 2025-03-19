@@ -27,24 +27,35 @@ const DetailMain = () => {
     }, [id]);
 
     if (!gogiData) {
-        return <p>이미 삭제되었거나 없는 상품입니다.</p>;
+        return <p>로딩중...</p>;
     }
+
 
     return (
         <MainContainer>
+
             <HeaderWrapper>
                 <Header />
             </HeaderWrapper>
+
             <Div1 />
+
             <DetailContentWrapper>
+
                 <ImageSlider images={gogiData.images} />
+
                 <DetailInfo product={gogiData} />
+
                 <DetailConContainer />
+
             </DetailContentWrapper>
+
             <Div2 />
+
             <FooterWrapper>
                 <Footer />
             </FooterWrapper>
+
         </MainContainer>
     );
 };
