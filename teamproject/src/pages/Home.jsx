@@ -17,7 +17,7 @@ const Home = () => {
           <HeaderWrapper>
             <Header />
           </HeaderWrapper>
-          <br/>
+          <br />
           <Banner />
           <CategoryMenu />
           <NoticeBox />

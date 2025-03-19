@@ -7,11 +7,11 @@ import { Pagination, Autoplay } from "swiper/modules"; // Swiper 기능(페이�
 
 // 🏷️ 배너 이미지 목록
 const bannerImages = [
-  "https://i.imgur.com/KymMe2y.png", // 첫 번째 배너 이미지
-  "https://i.imgur.com/uGpTGzp.jpeg", // 두 번째 배너 이미지
-  "https://i.imgur.com/L6siJsZ.png", // 세 번째 배너 이미지
-  "https://i.imgur.com/N1xyZ8I.png", // 네 번째 배너 이미지
-  "", // 다섯 번째 배너 이미지
+  "https://i.imgur.com/3rC8gfW.png", // 첫 번째 배너 이미지
+  "https://i.imgur.com/KymMe2y.png", // 두 번째 배너 이미지
+  "https://i.imgur.com/j1OHRAX.png", // 세 번째 배너 이미지
+  "https://i.imgur.com/L6siJsZ.png", //  네 번째 배너 이미지
+  "https://i.imgur.com/N1xyZ8I.png", // 다섯번째 배너 이미지
 ];
 
 // 🏷️ 배너 컴포넌트
