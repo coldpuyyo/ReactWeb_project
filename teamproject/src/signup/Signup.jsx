@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Form, LoginLink, SignupButton, SignupContainer, SignupTitle, Wrapper } from "./SignupStyle";
+import { HeaderWrapper } from "../header/HeaderStyle";
+import Header from "../header/Header";
+import Footer from "../components/Footer";
+import { FooterWrapper } from "../styles/FooterStyles";
+import { MainContainer } from "../MainContainerGrid";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -55,91 +61,79 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup-container">
-      <form className="signup-form" onSubmit={handleSignup}>
-        <h1>On&Off</h1>
+    <>
+    <MainContainer>
+      <HeaderWrapper>
+        <Header />
+      </HeaderWrapper>
+      <SignupContainer>
+        <Form className="signup-form" onSubmit={handleSignup}>
+          <SignupTitle>회원가입</SignupTitle>
 
-        <label htmlFor="email">이메일</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <label htmlFor="email">이메일</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <label htmlFor="username">사용자명</label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+          <label htmlFor="username">성명</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
 
-        <label htmlFor="nickname">닉네임</label>
-        <input
-          type="text"
-          id="nickname"
-          value={userNickname}
-          onChange={(e) => setUserNickname(e.target.value)}
-        />
+          <label htmlFor="nickname">닉네임</label>
+          <input
+            type="text"
+            id="nickname"
+            value={userNickname}
+            onChange={(e) => setUserNickname(e.target.value)}
+          />
 
-        <label htmlFor="phone-number">전화번호</label>
-        <input
-          type="text"
-          id="phone-number"
-          value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
-        />
+          <label htmlFor="phone-number">전화번호</label>
+          <input
+            type="text"
+            id="phone-number"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
 
-        <label htmlFor="password">비밀번호</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <label htmlFor="password">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-        <label htmlFor="confirm-password">비밀번호 확인</label>
-        <input
-          type="password"
-          id="confirm-password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />
+          <label htmlFor="confirm-password">비밀번호 확인</label>
+          <input
+            type="password"
+            id="confirm-password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <br/>
+          <Wrapper>
+          <SignupButton onClick={handleSignup}>
+            회원가입
+          </SignupButton>
 
-        <div className="role-selection">
-          <label>회원 유형</label>
-          <div>
-            <input
-              type="radio"
-              id="customer"
-              value="user"
-              checked={role === "user"}
-              onChange={() => setRole("user")}
-            />
-            <label htmlFor="customer">고객</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              id="seller"
-              value="seller"
-              checked={role === "seller"}
-              onChange={() => setRole("seller")}
-            />
-            <label htmlFor="seller">판매자</label>
-          </div>
-        </div>
-
-        <button id="signup-button" onClick={handleSignup}>
-          회원가입
-        </button>
-
-        <p className="login-link">
-          이미 회원이신가요? <Link to="/login">로그인</Link>
-        </p>
-      </form>
-    </div>
+          <LoginLink>
+            이미 회원이신가요? <Link to="/login">로그인</Link>
+          </LoginLink>
+          </Wrapper>
+        </Form>
+      </SignupContainer>
+      <FooterWrapper>
+      <Footer/>
+      </FooterWrapper>
+    </MainContainer>
+    </>
   );
 };
 

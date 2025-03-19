@@ -2,7 +2,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './login/Login';
 import DetailMain from './DetailComponets/DetailMain';
-// import Home from "./pages/Home";
+import Signup from './signup/Signup';
+import Home from "./pages/Home";
+import Meat_All from './meat_all/Meat_All';
+import Mypage from './mypage/Mypage';
 
 
 // function App() {
@@ -25,13 +28,17 @@ function App(){
 
     <>
     <Router>
-      {/* <Header/> */}
       <Routes>
-      <Route path="/" element={<Login />} />
-        <Route path = "/login_page" element ={<Login/>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/meat_all" element={<Meat_All />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/mypage" element={<Mypage />} />
+        {/* <Route path = "/login_page" element ={<Login/>} /> */}
       </Routes>
     </Router>
     </>
   );
 }
 export default App;
+

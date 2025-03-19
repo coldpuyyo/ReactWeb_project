@@ -4,7 +4,6 @@ import Header from "../header/Header";
 import { HeaderWrapper } from "../header/HeaderStyle";
 import {
     LoginContainer,
-    MainContainer,
     LoginBox,
     LoginTitle,
     FormContainer,
@@ -15,6 +14,9 @@ import {
     ErrorMessage,
     SignupLink
 } from "./LoginStyle";
+import { FooterWrapper } from "../styles/FooterStyles";
+import Footer from "../components/Footer";
+import { MainContainer } from "../MainContainerGrid";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -82,10 +84,13 @@ const Login = () => {
                     {loginCheck && <ErrorMessage>이메일 혹은 비밀번호가 틀렸습니다.</ErrorMessage>}
 
                     <SignupLink>
-                        아직 회원이 아니신가요? <Link to="../signup/Signup">회원가입</Link>
+                        아직 회원이 아니신가요? <Link to="../signup/">회원가입</Link>
                     </SignupLink>
                 </LoginBox>
             </LoginContainer>
+            <FooterWrapper>
+                <Footer/>
+            </FooterWrapper>
         </MainContainer>
     );
 };
