@@ -7,9 +7,9 @@ import ImageSlider from "./ImageSlider";
 import DetailInfo from "./DetailInfo";
 import { HeaderWrapper } from './../header/HeaderStyle';
 import Header from "../header/Header";
-import { MainContainer } from "../login/LoginStyle";
 import Footer from './../components/Footer';
 import { FooterWrapper } from "../styles/FooterStyles";
+import { MainContainer } from "../MainContainerGrid";
 
 const DetailMain = () => {
     const { id } = useParams();

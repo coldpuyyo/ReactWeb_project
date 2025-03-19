@@ -1,18 +1,22 @@
 import React from "react";
-import Header from "../header/Header";
 import Banner from "../components/Banner";
 import CategoryMenu from "../components/CategoryMenu";
 import CategoryBanner from "../components/CategoryBanner";
 import ProductList from "../components/ProductList";
 import { PageContainer, ContentWrapper } from "../styles/commonStyles";
 import Footer from "../components/Footer";
+import { HeaderWrapper } from "../header/HeaderStyle";
+import Header from "../header/Header";
 
 const Home = () => {
   return (
     <>
       <PageContainer>
         <ContentWrapper>
-          <Header />
+          <HeaderWrapper>
+            <Header />
+          </HeaderWrapper>
+          <br/>
           <Banner />
           <CategoryMenu />
           <CategoryBanner />

@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
 
 /* 🏷️ 푸터 내부 콘텐츠 영역 (최대 너비 설정) */
 export const FooterContent = styled.div`
-  width: 1100px; /* 최대 너비 1100px */
+  width: 1000px; /* 최대 너비 1100px */
   margin: 0 auto; /* 가운데 정렬 */
   padding: 0 20px; /* 좌우 패딩 추가 */
 `;
@@ -45,5 +45,5 @@ export const FooterInfo = styled.div`
 export const FooterWrapper = styled.div`
   display: grid;
   grid-row: 7;
-  grid-column: 2/6
+  grid-column: 2/6;
 `;

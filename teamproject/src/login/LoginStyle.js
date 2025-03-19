@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div`
-  display: grid;
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-columns: repeat(6, 1fr);
-  height: 100vh;
-  background-color:rgb(255, 255, 255);
-`;
-
 export const LoginContainer = styled.div`
   display: grid;
   grid-row: 4;
@@ -20,8 +12,6 @@ export const LoginContainer = styled.div`
 
 export const LoginBox = styled.div`
   display: grid;
-  grid-row: 4;
-  grid-column: 3/5;
   grid-template-rows: auto 1fr auto;
   background-color:rgb(247, 247, 247);
   padding: 30px;
@@ -64,7 +54,7 @@ export const Label = styled.label`
 export const LoginButton = styled.button`
   margin-left: 30px;
   margin-top: 25px;
-  height: 80%;
+  height: 78%;
   padding: 10px;
   background-color:rgb(255, 0, 0);
   color: white;

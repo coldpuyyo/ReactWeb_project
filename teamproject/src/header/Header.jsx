@@ -16,16 +16,16 @@ function Header() {
     return (
         <>
             <div className="header__logo">
-
-                <LogoImage src={Logo} alt="로고" onClick={goHome} />
-
+                <div>
+                    <LogoImage src={Logo} alt="로고" onClick={goHome} />
+                </div>
             </div>
             <div />
             <div />
             <div />
-
-            <CartImage src={Cart} alt="장바구니" onClick={goLogin} />
-
+            <div>
+                <CartImage src={Cart} alt="장바구니" onClick={goLogin} />
+            </div>
         </>
     )
 }
