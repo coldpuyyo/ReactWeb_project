@@ -1,5 +1,4 @@
 import React from "react";
-
 import Banner from "../components/Banner";
 import CategoryMenu from "../components/CategoryMenu";
 import NoticeBox from "../components/NoticeBox"

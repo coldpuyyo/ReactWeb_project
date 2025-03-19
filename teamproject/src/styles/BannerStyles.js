@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import { Swiper } from 'swiper/react';
 
 export const BannerContainer = styled.section`
   width: 100%;
+  height: 400px;
   max-width: 1050px;
   position: relative;
   display: flex;
   justify-content: center;
-`;
+  `;
 
 export const PageIndicator = styled.div`
   position: absolute;

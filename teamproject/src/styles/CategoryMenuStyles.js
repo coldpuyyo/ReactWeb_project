@@ -6,7 +6,7 @@ export const CategoryContainer = styled.div`
   gap: 12px; /* 간격 줄이기 */
   padding: 16px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1050px;
 `;
 
 export const CategoryItem = styled.div`

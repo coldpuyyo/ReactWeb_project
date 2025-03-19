@@ -10,11 +10,11 @@ import { ContentWrapper } from "../styles/commonStyles"; // 공통 스타일 불
 
 // 🏷️ 카테고리 데이터 배열
 const categories = [
-  { name: "카테고리", image: "https://placehold.co/60x60?text=혜택" }, // 첫 번째 카테고리
-  { name: "카테고리", image: "https://placehold.co/60x60?text=선물" }, // 두 번째 카테고리
-  { name: "카테고리", image: "https://placehold.co/60x60?text=한우" }, // 세 번째 카테고리
-  { name: "카테고리", image: "https://placehold.co/60x60?text=키즈" }, // 네 번째 카테고리
-  { name: "카테고리", image: "https://placehold.co/60x60?text=돼지" }, // 다섯 번째 카테고리
+  { name: "전체", image: "https://placehold.co/60x60?text=혜택" }, // 첫 번째 카테고리
+  { name: "안심", image: "https://placehold.co/60x60?text=선물" }, // 두 번째 카테고리
+  { name: "등심", image: "https://placehold.co/60x60?text=한우" }, // 세 번째 카테고리
+  { name: "특수", image: "https://placehold.co/60x60?text=키즈" }, // 네 번째 카테고리
+  { name: "간편식", image: "https://placehold.co/60x60?text=돼지" }, // 다섯 번째 카테고리
 ];
 
 // 🏷️ 카테고리 메뉴 컴포넌트

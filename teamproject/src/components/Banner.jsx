@@ -7,11 +7,11 @@ import { Pagination, Autoplay } from "swiper/modules"; // Swiper 기능(페이�
 
 // 🏷️ 배너 이미지 목록
 const bannerImages = [
-  "https://placehold.co/1200x400?text=Banner+1", // 첫 번째 배너 이미지
-  "https://placehold.co/1200x400?text=Banner+2", // 두 번째 배너 이미지
-  "https://placehold.co/1200x400?text=Banner+3", // 세 번째 배너 이미지
-  "https://placehold.co/1200x400?text=Banner+4", // 네 번째 배너 이미지
-  "https://placehold.co/1200x400?text=Banner+5", // 다섯 번째 배너 이미지
+  "https://i.imgur.com/KymMe2y.png", // 첫 번째 배너 이미지
+  "https://i.imgur.com/uGpTGzp.jpeg", // 두 번째 배너 이미지
+  "https://i.imgur.com/L6siJsZ.png", // 세 번째 배너 이미지
+  "https://i.imgur.com/N1xyZ8I.png", // 네 번째 배너 이미지
+  "", // 다섯 번째 배너 이미지
 ];
 
 // 🏷️ 배너 컴포넌트
@@ -19,6 +19,7 @@ const Banner = () => {
   return (
     <BannerContainer>
       {/* Swiper 슬라이더 */}
+      <div><p>협업기획전</p></div> {/* 배너 제목 */}
       <Swiper
         modules={[Pagination, Autoplay]} // 페이지네이션 & 자동재생 기능 추가
         pagination={{ clickable: true }} // 페이지네이션 클릭 가능 설정
@@ -31,7 +32,7 @@ const Banner = () => {
             <img 
               src={img} 
               alt={`배너 ${index + 1}`} 
-              style={{ width: "100%", height: "auto" }} // 이미지 크기 설정
+              style={{ width: "100%", height: "400px" }} // 이미지 크기 설정
             />
           </SwiperSlide>
         ))}
