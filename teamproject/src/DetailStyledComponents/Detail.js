@@ -9,8 +9,9 @@ export const DetailContentWrapper = styled.div`
   grid-row: 3/6;
   padding: 20px;
   min-width: 500px;
-  background-color: rgb(247, 241, 239);
+  background-color:#ff8a8a;
 `;
+
 
 export const Div1 = styled.div`
   display: grid;
@@ -26,7 +27,8 @@ export const Div2 = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-
+  justify-self: center;
+  align-self: center;
 `;
 
 export const SlideImage = styled.img`
@@ -56,8 +58,6 @@ export const Goginame = styled.div`
   grid-area: name;
   font-style:italic;
 `;
-
-
 
 
 export const DetailConWrapper = styled.div`
@@ -90,3 +90,47 @@ export const DetailConContent = styled.div`
   background: #fff;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 `;
+
+
+
+export const ToggleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
+export const TabWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+`;
+
+export const TabButton = styled.button`
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: ${({ isActive }) => (isActive ? "#ddd" : "#f1f1f1")};
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  min-width: 120px;
+
+  &:hover {
+    background: #ddd;
+  }
+`;
+
+export const ContentWrapper = styled.div`
+  width: calc(120px * 3 + 20px * 2);
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  min-height: 50px;
+`;
+
+export const Content = styled.div``;

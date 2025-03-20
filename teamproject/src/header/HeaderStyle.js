@@ -8,16 +8,23 @@ export const HeaderWrapper = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-row: 1;
   grid-column: 2/6;
+  grid-template-areas: "logo empty empty empty cart";
+  justify-items: center;
+  align-items: center;
 `;
+
+
 export const LogoImage = styled.img`
-    margin-left: 30px;
+display: grid;
     width: 105px;
     height: 105px;
     cursor: pointer;
 `
 export const CartImage = styled.img`
-    float: right;
+    display: grid;
     width: 105px;
     height: 105px;
     cursor: pointer;
+    grid-area: cart;
+
 `

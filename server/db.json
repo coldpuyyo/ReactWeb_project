@@ -1,5 +1,12 @@
 {
-    "client": {},
+    "client": {
+        "id": "3191",
+        "email": "g@g.g",
+        "password": "1234",
+        "nickname": "kkm",
+        "name": "kkm",
+        "phone": "010-1111-1111"
+    },
     "gogiInfo": [
         {
             "id": 1,
@@ -42,9 +49,9 @@
         {
             "id": 3,
             "name": "한우 사태",
-            "weight": 700,
+            "weight": 1400,
             "origin": "국내산 한우",
-            "price": 45000,
+            "price": 130000,
             "part": "사태",
             "usage": "요리용",
             "storage": "냉장",
@@ -190,6 +197,15 @@
                     "url": "https://example.com/images/hanwoo10-1.jpg"
                 }
             ]
+        }
+    ],
+    "review": [
+        {
+            "id": 1,
+            "clientId": "3191",
+            "gogiId": 1,
+            "reviewText": "고기가 부드러워요",
+            "star": 5
         }
     ]
 }

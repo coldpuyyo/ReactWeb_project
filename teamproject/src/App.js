@@ -35,20 +35,22 @@ import Mypage from './mypage/Mypage';
 
 // export default App;
 
-function App(){
-  return(
+function App() {
+  return (
 
     <>
-    <Router>
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/meat_all" element={<Meat_All />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/mypage" element={<Mypage />} />
-        {/* <Route path = "/login_page" element ={<Login/>} /> */}
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/meat_all" element={<Meat_All />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/mypage" element={<Mypage />} />
+          <Route path="/detail/:id" element={< DetailMain />} />
+          {/* <Route path = "/login_page" element ={<Login/>} /> */}
+        </Routes>
+      </Router>
     </>
   );
 }

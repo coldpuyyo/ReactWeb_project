@@ -29,13 +29,7 @@ const Login = () => {
         event.preventDefault();
         await new Promise((r) => setTimeout(r, 1000));
 
-        const response = await fetch("로그인 서버 주소", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email, password }),
-        });
+        const response = await fetch(`http://localhost:3001/client?email=${email}&password=${password}`);
 
         const result = await response.json();
 
@@ -43,7 +37,6 @@ const Login = () => {
             setLoginCheck(false);
             sessionStorage.setItem("token", result.token);
             sessionStorage.setItem("email", result.email);
-            sessionStorage.setItem("role", result.role);
             sessionStorage.setItem("storeid", result.storeId);
             console.log("로그인 성공, 이메일 주소:", result.email);
             navigate("/");
@@ -89,7 +82,7 @@ const Login = () => {
                 </LoginBox>
             </LoginContainer>
             <FooterWrapper>
-                <Footer/>
+                <Footer />
             </FooterWrapper>
         </MainContainer>
     );

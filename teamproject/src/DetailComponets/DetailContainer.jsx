@@ -1,38 +1,45 @@
 import React, { useState } from "react";
-import {
-  DetailConWrapper,
-  DetailConItem,
-  DetailConTitle,
-  DetailConContent
-} from "../DetailStyledComponents/Detail";
+import { ToggleContainer, TabWrapper, TabButton, ContentWrapper, Content } from "../DetailStyledComponents/Detail";
 
-const DetailConContainer = () => {
-  const items = [
+const DetailConContainer = ({ review }) => {
+
+  
+  const reviewText = review.length > 0 ? review.map(r => r.reviewText).join(",") : " 리뷰없음 ";
+  
+  
+  const InfoBar = [
     { title: "상품 설명", content: "사지마세요." },
-    { title: "상품 리뷰", content: "★★★★★ (1.8/5) 1.8점." },
-    { title: "상품 정보", content: "제조사: 없음, 원산지: 브라질" }
+    { title: "상품 정보", content: "제조사: 없음, 원산지: 브라질" },
+    { title: "리뷰", content: reviewText }
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  const toggleDetailCon = (index) => {
-    setActiveIndex(index === activeIndex ? -1 : index);
-  };
+
+
+  const [indexControll, setIndexControll] = useState(0);
 
   return (
-    <DetailConWrapper>
-      {items.map((item, index) => (
-        <DetailConItem key={index}>
-          <DetailConTitle onClick={() => toggleDetailCon(index)}>
-            {item.title}
-          </DetailConTitle>
-          <DetailConContent data-isopen={activeIndex === index}>
-            {item.content}
-          </DetailConContent>
-        </DetailConItem>
-      ))}
-    </DetailConWrapper>
+    <ToggleContainer>
+      <TabWrapper>
+        {InfoBar.map((good, index) => (
+          <TabButton
+            key={index}
+            isActive={indexControll === index}
+            onClick={() => setIndexControll(index)}
+          >
+            {good.title}
+          </TabButton>
+        ))}
+        <p>{review.text}</p>
+      </TabWrapper>
+
+      <ContentWrapper>
+        <Content>{InfoBar[indexControll].content}</Content>
+      </ContentWrapper>
+    </ToggleContainer>
   );
 };
 
 export default DetailConContainer;
+
+
