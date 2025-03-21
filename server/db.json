@@ -216,5 +216,14 @@
         }
       ]
     }
+  ],
+  "review": [
+    {
+        "id": 1,
+        "clientId": "3191",
+        "gogiId": 1,
+        "reviewText": "고기가 부드러워요",
+        "star": 5
+    }
   ]
 }
