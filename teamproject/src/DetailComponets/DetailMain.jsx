@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { DetailContentWrapper, Div1, Div2, Loading } from "../DetailStyledComponents/Detail";
+import { DetailContentWrapper, Div1, Div2 } from "../DetailStyledComponents/Detail";
 import DetailConContainer from "./DetailContainer";
 import ImageSlider from "./ImageSlider";
 import DetailInfo from "./DetailInfo";

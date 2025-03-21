@@ -27,8 +27,8 @@ export const Div2 = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  justify-self: center;
-  align-self: center;
+margin-left:40px;
+
 `;
 
 export const SlideImage = styled.img`

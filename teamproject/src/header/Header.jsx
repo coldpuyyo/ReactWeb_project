@@ -1,7 +1,7 @@
 import Logo from '../asset/logo.png';
 import Cart from '../asset/cart.png';
 import { CartImage, LogoImage } from './HeaderStyle';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
     const isLoggedIn = sessionStorage.getItem("token") !== null;
@@ -21,6 +21,7 @@ function Header() {
     return (
         <>
             <LogoImage src={Logo} alt="로고" onClick={goHome} />
+            <Link to="/detail/1">디테일</Link>
             <CartImage src={Cart} alt="장바구니" onClick={isLoggedIn ? goMypage : goLogin} />
         </>
     );

@@ -3,10 +3,10 @@ import { ToggleContainer, TabWrapper, TabButton, ContentWrapper, Content } from 
 
 const DetailConContainer = ({ review }) => {
 
-  
+
   const reviewText = review.length > 0 ? review.map(r => r.reviewText).join(",") : " 리뷰없음 ";
-  
-  
+
+
   const InfoBar = [
     { title: "상품 설명", content: "사지마세요." },
     { title: "상품 정보", content: "제조사: 없음, 원산지: 브라질" },
