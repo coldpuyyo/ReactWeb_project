@@ -14,23 +14,39 @@ import { MainContainer } from "../MainContainerGrid";
 const DetailMain = () => {
     const { id } = useParams();
     const [gogiData, setGogiData] = useState(null);
+    const [reviewData, setReviewData] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         axios.get("http://localhost:3001/gogiInfo")
             .then((response) => {
-                const product = response.data.find((item) => Number(item.id) === Number(id));
+                const product = response.data.find((tool) => Number(tool.id) === Number(id));
                 setGogiData(product || null);
             })
             .catch((error) => {
-                console.error("데이터 안불러짐 콘솔 확인:", error);
+                console.error("데이터 안불러짐 콘솔 확인", error);
             });
     }, [id]);
 
-    if (!gogiData) {
-        return <p>로딩중...</p>;
+
+
+
+    useEffect(() => {
+        axios.get("http://localhost:3001/review")
+            .then((response) => {
+                setReviewData(response.data);
+            })
+            .catch((error) => {
+                console.log("리뷰 테이터 안불러짐 콘솔 확인", error);
+            }).finally(() => setLoading(false));
+    }, []);
+
+
+    const gogiAndReview = (reviewData || []).filter(review => (review.gogiId === gogiData.id));
+
+    if (loading || !gogiData || !reviewData) {
+        return <p>데이터 로딩 중...</p>;
     }
-
-
     return (
         <MainContainer>
 
@@ -46,7 +62,7 @@ const DetailMain = () => {
 
                 <DetailInfo gogi={gogiData} />
 
-                <DetailConContainer />
+                <DetailConContainer review={gogiAndReview} />
 
             </DetailContentWrapper>
 

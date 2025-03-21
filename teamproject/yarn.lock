@@ -1268,6 +1268,7 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.7.2"
 
+<<<<<<< HEAD
 "@fortawesome/free-brands-svg-icons@^6.7.2":
   version "6.7.2"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.7.2.tgz#4ebee8098f31da5446dda81edc344025eb59b27e"
@@ -1282,6 +1283,8 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.7.2"
 
+=======
+>>>>>>> jhj
 "@fortawesome/free-solid-svg-icons@^6.7.2":
   version "6.7.2"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.7.2.tgz#fe25883b5eb8464a82918599950d283c465b57f6"

@@ -14,7 +14,6 @@ const Logout = () => {
 	const handleLogout = () => {
     	sessionStorage.removeItem("token");
 		sessionStorage.removeItem("email");
-		sessionStorage.removeItem("storeid");
     	navigate("/");
   	};
   

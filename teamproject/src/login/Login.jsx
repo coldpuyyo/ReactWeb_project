@@ -97,7 +97,7 @@ const Login = () => {
                 </LoginBox>
             </LoginContainer>
             <FooterWrapper>
-                <Footer/>
+                <Footer />
             </FooterWrapper>
         </MainContainer>
     );
