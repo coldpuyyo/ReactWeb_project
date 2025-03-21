@@ -11,9 +11,9 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 // 카테고리 배너 이미지 배열
 const categoryBannerImages = [
-  "https://cafe24.poxo.com/ec01/sop1004/BhNwo1jckXH28PSBZRxpvsZT7lpdP9y8k06zWfWfMHCfOMs2QQ2ofLqaFkfodd54ObIwVZrRuLnEVoHU43XCpw==/_/web/upload/category/mobile/shop1_105_top_420162.jpg",
-  "https://sitem.ssgcdn.com/04/32/79/item/1000591793204_i1_290.jpg",
-  "https://placehold.co/600x200?text=Category+Banner+3",
+  "https://i.imgur.com/XLSU5OW.png",
+  "https://image.idus.com/image/files/87da4efadbf748b0b065e5d3305cb18f_720.gif",
+  "https://i.imgur.com/r3QdvW1.png ",
 ];
 
 // CategoryBanner 컴포넌트 정의

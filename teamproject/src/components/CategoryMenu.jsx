@@ -10,11 +10,11 @@ import { ContentWrapper } from "../styles/commonStyles"; // 공통 스타일 불
 
 // 🏷️ 카테고리 데이터 배열
 const categories = [
-  { name: "전체", image: "https://placehold.co/60x60?text=혜택" }, // 첫 번째 카테고리
-  { name: "안심", image: "https://placehold.co/60x60?text=선물" }, // 두 번째 카테고리
-  { name: "등심", image: "https://placehold.co/60x60?text=한우" }, // 세 번째 카테고리
-  { name: "특수", image: "https://placehold.co/60x60?text=키즈" }, // 네 번째 카테고리
-  { name: "간편식", image: "https://placehold.co/60x60?text=돼지" }, // 다섯 번째 카테고리
+  { name: "전체", image: "https://i.imgur.com/dH69YID.png" }, // 첫 번째 카테고리
+  { name: "안심", image: "https://francegourmet.kr/web/product/tiny/29.jpg" }, // 두 번째 카테고리
+  { name: "등심", image: "https://cdn.imweb.me/thumbnail/20220706/0a4cc849ff82d.png" }, // 세 번째 카테고리
+  { name: "특수", image: "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/2644106915/B.jpg?431000000" }, // 네 번째 카테고리
+  { name: "간편식", image: "https://tigl.kr/data/images/sumnail/7885861705/7885861705_0.jpg" }, // 다섯 번째 카테고리
 ];
 
 // 🏷️ 카테고리 메뉴 컴포넌트
