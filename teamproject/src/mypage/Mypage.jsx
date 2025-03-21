@@ -1,6 +1,9 @@
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "../components/Footer";
 import Header from "../header/Header";
 import { HeaderWrapper } from "../header/HeaderStyle";
+import Logout from "../logout/Logout";
 import { MainContainer } from "../MainContainerGrid";
 import { FooterWrapper } from "../styles/FooterStyles";
 import { CustomerService, Div1, Div2, EventList, MyBox, MyCart, MyInfoButton, MyOrder, MypageContainer, Myshoping, Wrapper } from "./Mypagestyle";
@@ -15,18 +18,27 @@ const Mypage = () => {
                 <Div1/>
                 <MypageContainer>
                     <MyBox>
-                        <MyInfoButton type="submit">안녕하세요 ???님 ＞</MyInfoButton>
+                        <MyInfoButton type="submit">안녕하세요 ???님 
+                            &nbsp;<FontAwesomeIcon icon={faChevronRight} />
+                        </MyInfoButton>
+                        <Logout />
                         <div>&nbsp;</div>
                         <Wrapper>
                         <MyOrder type="button">주문 내역
                             <br />
                             <br />
-                            <span>＞ 0건</span>
+                            <span>
+                                <FontAwesomeIcon icon={faChevronRight} />
+                                &nbsp;0건
+                            </span>
                         </MyOrder>
                         <MyCart>장바구니
                             <br />
                             <br />
-                            <span>＞ 0개</span>
+                            <span>
+                                <FontAwesomeIcon icon={faChevronRight} />
+                                &nbsp;0개
+                            </span>
                         </MyCart>
                         </Wrapper>
                     </MyBox>

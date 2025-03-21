@@ -6,9 +6,25 @@ import Header from "../header/Header";
 import { HeaderWrapper } from "../header/HeaderStyle";
 import { MainContainer } from "../MainContainerGrid";
 import { FooterWrapper } from "../styles/FooterStyles";
-import { CategoryMenuWrapper, ProductListWrapper, BannerWrapper } from "./Wrapper";
+import styled from "styled-components";
 
+const BannerWrapper = styled.div`
+  display: grid;
+  grid-row: 3;
+  grid-column: 2/6;
+`;
 
+const CategoryMenuWrapper = styled.div`
+  display: grid;
+  grid-row: 4;
+  grid-column: 2/6;
+`;
+
+const ProductListWrapper = styled.div`
+  display: grid;
+  grid-row: 5;
+  grid-column: 2/6;
+`;
 
 const Meat_All = () => {
     return (

@@ -16,7 +16,7 @@ const DetailMain = () => {
     const [gogiData, setGogiData] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/gogiInfo")
+        axios.get("http://localhost:3001/gogiInfo")
             .then((response) => {
                 const product = response.data.find((item) => Number(item.id) === Number(id));
                 setGogiData(product || null);

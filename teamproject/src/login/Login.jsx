@@ -22,35 +22,42 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loginCheck, setLoginCheck] = useState(false);
+    const [emailError, setEmailError] = useState(false);
 
     const navigate = useNavigate();
 
+    const validateEmail = (email) => {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(email);
+    };
+
     const handleLogin = async (event) => {
         event.preventDefault();
-        await new Promise((r) => setTimeout(r, 1000));
 
-        const response = await fetch("로그인 서버 주소", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email, password }),
-        });
+        if (!validateEmail(email)) {
+            setEmailError(true);
+            return;
+        }
 
-        const result = await response.json();
-
-        if (response.status === 200) {
+        setEmailError(false);
+    
+        try {
+            const response = await fetch(`http://localhost:3001/client?email=${email}`);
+            const users = await response.json();
+    
+            if (users.length === 0 || users[0].password !== password) {
+                setLoginCheck(true);
+                return;
+            }
+    
             setLoginCheck(false);
-            sessionStorage.setItem("token", result.token);
-            sessionStorage.setItem("email", result.email);
-            sessionStorage.setItem("role", result.role);
-            sessionStorage.setItem("storeid", result.storeId);
-            console.log("로그인 성공, 이메일 주소:", result.email);
+            sessionStorage.setItem("token", "dummy-token");
+            sessionStorage.setItem("email", users[0].email);
             navigate("/");
-        } else {
+        } catch (error) {
             setLoginCheck(true);
         }
-    };
+    };    
 
     return (
         <MainContainer>
@@ -69,6 +76,7 @@ const Login = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
+                            {emailError && <ErrorMessage>유효한 이메일을 입력해주세요.</ErrorMessage>}
                             <Label htmlFor="password">패스워드</Label>
                             <InputField
                                 type="password"
@@ -81,7 +89,7 @@ const Login = () => {
                         <LoginButton type="submit">로그인</LoginButton>
                     </FormContainer>
 
-                    {loginCheck && <ErrorMessage>이메일 혹은 비밀번호가 틀렸습니다.</ErrorMessage>}
+                    {loginCheck && <ErrorMessage><br/>이메일 혹은 비밀번호가 틀렸습니다.</ErrorMessage>}
 
                     <SignupLink>
                         아직 회원이 아니신가요? <Link to="../signup/">회원가입</Link>
