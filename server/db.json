@@ -1,16 +1,51 @@
 {
-  "client": {
-    "id": "3191",
-    "email": "g@g.g",
-    "password": "1234",
-    "nickname": "kkm",
-    "name": "kkm",
-    "phone": "010-1111-1111"
-  },
+  "client": [
+    {
+      "id": "3191",
+      "email": "g@g.com",
+      "password": "1234",
+      "nickname": "kkm",
+      "name": "kkm",
+      "phone": "010-1111-1111"
+    },
+    {
+      "id": "6f48",
+      "email": "a@a.com",
+      "password": "apfhd378@",
+      "nickname": "asdf",
+      "name": "a",
+      "phone": "010-0000-0000"
+    },
+    {
+      "id": "c094",
+      "email": "a@a.com",
+      "password": "apfhd378@",
+      "nickname": "asdfg",
+      "name": "a",
+      "phone": "010-0000-0000"
+    }
+  ],
   "gogiInfo": [
     {
-      "id": 201,
-      "url": "https://cdn.sirloin.co.kr/images/product/62bbd64790ce53452e5f6a2a/represent/%EC%83%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EC%95%99_%EC%84%A4_%EC%8D%B8_1_%EC%88%98%EC%A0%95.jpg"
+      "id": 1,
+      "name": "사토브리앙",
+      "weight": 600,
+      "origin": "국내산 한우",
+      "price": 48000,
+      "part": "등심",
+      "usage": "스테이크",
+      "storage": "냉장",
+      "shippingFee": 3000,
+      "images": [
+        {
+          "id": 201,
+          "url": "https://cdn.sirloin.co.kr/images/product/62bbd64790ce53452e5f6a2a/represent/%EC%83%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EC%95%99_%EC%84%A4_%EC%8D%B8_1_%EC%88%98%EC%A0%95.jpg"
+        },
+        {
+          "id": 202,
+          "url": "https://cdn.sirloin.co.kr/images/product/62bbd64790ce53452e5f6a2a/represent/%EC%83%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EC%95%99-%EC%84%A4-%EC%8D%B8-3.jpg"
+        }
+      ]
     },
     {
       "id": 2,
@@ -184,11 +219,11 @@
   ],
   "review": [
     {
-      "id": 1,
-      "clientId": "3191",
-      "gogiId": 1,
-      "reviewText": "고기가 부드러워요",
-      "star": 5
+        "id": 1,
+        "clientId": "3191",
+        "gogiId": 1,
+        "reviewText": "고기가 부드러워요",
+        "star": 5
     }
   ]
 }
