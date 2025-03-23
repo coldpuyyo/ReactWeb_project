@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ProductContainer, ProductItem, DetailButton, ImageWrapper, ProductImage} from "../styles/ProductListStyles";
+import { ProductContainer, ProductItem, DetailButton, ImageWrapper, ProductImage } from "../styles/ProductListStyles";
 import { ContentWrapper } from "../styles/commonStyles";
 import axios from "axios";
+import { Link } from "react-router-dom"; // React Router에서 Link 가져오기
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -27,18 +28,20 @@ const ProductList = () => {
           products.map((product) => (
             <ProductItem key={product.id}>
               <ImageWrapper>
-              {product.images && product.images.length > 0 ? (
-                <ProductImage src={product.images[0].url} alt={`상품 ${product.id}`} />
-              ) : (
-                <ProductImage src="https://placehold.co/150x220?text=No+Image" alt="기본 이미지" />
-              )}
-              <DetailButton>{"상세보기"}</DetailButton>
+                {product.images && product.images.length > 0 ? (
+                  <ProductImage src={product.images[0].url} alt={`상품 ${product.id}`} />
+                ) : (
+                  <ProductImage src="https://placehold.co/150x220?text=No+Image" alt="기본 이미지" />
+                )}
+                <Link to={`/detail/${product.id}`}>
+                  <DetailButton>상세보기</DetailButton>
+                </Link>
               </ImageWrapper>
               <strong>{product.name}</strong>
             </ProductItem>
           ))
         ) : (
-          <p>상품이 없습니다.</p> // 데이터가 없을 경우 안내 메시지 표시
+          <p>상품이 없습니다.</p>
         )}
       </ProductContainer>
     </ContentWrapper>
