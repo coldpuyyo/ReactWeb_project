@@ -17,6 +17,7 @@ import {
 import { FooterWrapper } from "../styles/FooterStyles";
 import Footer from "../components/Footer";
 import { MainContainer } from "../MainContainerGrid";
+import axios from "axios";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -42,8 +43,8 @@ const Login = () => {
         setEmailError(false);
     
         try {
-            const response = await fetch(`http://localhost:3001/client?email=${email}`);
-            const users = await response.json();
+            const response = await axios.get(`http://localhost:3001/client?email=${email}`);
+            const users = await response.data;
     
             if (users.length === 0 || users[0].password !== password) {
                 setLoginCheck(true);

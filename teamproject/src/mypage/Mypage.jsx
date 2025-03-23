@@ -7,8 +7,36 @@ import Logout from "../logout/Logout";
 import { MainContainer } from "../MainContainerGrid";
 import { FooterWrapper } from "../styles/FooterStyles";
 import { CustomerService, Div1, Div2, EventList, MyBox, MyCart, MyInfoButton, MyOrder, MypageContainer, Myshoping, Wrapper } from "./Mypagestyle";
+import { useEffect, useState } from "react";
+import axios from 'axios';
+
 
 const Mypage = () => {
+    const [userName, setUserName] = useState("고객");
+  
+    useEffect(() => {
+      const fetchUserName = async () => {
+        try {
+          const useremail = sessionStorage.getItem("email");
+  
+          const response = await axios.get("http://localhost:3001/client");
+  
+          const clients = await response.data;
+          const loggedInUser = clients.find(client => client.email === useremail);
+  
+          if (loggedInUser && loggedInUser.name) {
+            setUserName(loggedInUser.name);
+          } else {
+            setUserName("고객");
+          }
+        } catch (error) {
+          setUserName("고객");
+        }
+      };
+  
+      fetchUserName();
+    }, []);
+
     return (
         <>
             <MainContainer>
@@ -18,7 +46,7 @@ const Mypage = () => {
                 <Div1 />
                 <MypageContainer>
                     <MyBox>
-                        <MyInfoButton type="submit">안녕하세요 ???님 
+                        <MyInfoButton type="submit">안녕하세요 {userName}님 
                             &nbsp;<FontAwesomeIcon icon={faChevronRight} />
                         </MyInfoButton>
                         <Logout />
