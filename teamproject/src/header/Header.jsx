@@ -21,7 +21,6 @@ function Header() {
     return (
         <>
             <LogoImage src={Logo} alt="로고" onClick={goHome} />
-            <Link to="/detail/1">디테일</Link>
             <CartImage src={Cart} alt="장바구니" onClick={isLoggedIn ? goMypage : goLogin} />
         </>
     );
