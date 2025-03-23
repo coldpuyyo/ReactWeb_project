@@ -8,6 +8,7 @@ import { MainContainer } from "../MainContainerGrid";
 import { FooterWrapper } from "../styles/FooterStyles";
 import { CustomerService, Div1, Div2, EventList, MyBox, MyCart, MyInfoButton, MyOrder, MypageContainer, Myshoping, Wrapper } from "./Mypagestyle";
 import { useEffect, useState } from "react";
+import axios from 'axios';
 
 
 const Mypage = () => {
@@ -18,9 +19,9 @@ const Mypage = () => {
         try {
           const useremail = sessionStorage.getItem("email");
   
-          const response = await fetch("http://localhost:3001/client");
+          const response = await axios.get("http://localhost:3001/client");
   
-          const clients = await response.json();
+          const clients = await response.data;
           const loggedInUser = clients.find(client => client.email === useremail);
   
           if (loggedInUser && loggedInUser.name) {

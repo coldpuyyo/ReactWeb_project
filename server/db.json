@@ -13,7 +13,7 @@
       "email": "a@a.com",
       "password": "apfhd378@",
       "nickname": "asdf",
-      "name": "김김김",
+      "name": "a",
       "phone": "010-0000-0000"
     }
   ],
@@ -207,6 +207,15 @@
           "url": "https://example.com/images/hanwoo10-1.jpg"
         }
       ]
+    }
+  ],
+  "review": [
+    {
+        "id": 1,
+        "clientId": "3191",
+        "gogiId": 1,
+        "reviewText": "고기가 부드러워요",
+        "star": 5
     }
   ]
 }

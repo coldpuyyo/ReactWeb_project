@@ -9,6 +9,7 @@ import { MainContainer } from "../MainContainerGrid";
 import Modal from "../modal/Modal";
 import SignupForm from "./SignupForm";
 import { validateSignupForm } from "./Validation";
+import axios from "axios";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -50,8 +51,8 @@ const Signup = () => {
     };
 
     try {
-      const emailResponse = await fetch("http://localhost:3001/client");
-      const existingEmail = await emailResponse.json();
+      const emailResponse = await axios.get("http://localhost:3001/client");
+      const existingEmail = await emailResponse.data;
       const isEmailTaken = existingEmail.some((client) => client.email === email);
 
       if (isEmailTaken) {
@@ -60,8 +61,8 @@ const Signup = () => {
         return;
       }
 
-      const nicknameResponse = await fetch("http://localhost:3001/client");
-      const existingNick = await nicknameResponse.json();
+      const nicknameResponse = await axios.get("http://localhost:3001/client");
+      const existingNick = await nicknameResponse.data;
       const isNicknameTaken = existingNick.some((client) => client.nickname === userNickname);
 
       if (isNicknameTaken) {
@@ -70,30 +71,19 @@ const Signup = () => {
         return;
       }
 
-      const response = await fetch(
-        "http://localhost:3001/client",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      const response = await axios.post("http://localhost:3001/client", payload);
 
-      const data = await response.json();
-
-      if (response.ok) {
+      if (response.status === 201) {
         setModalMessage("회원가입이 완료되었습니다! 확인 버튼을 누르면 로그인 페이지로 이동합니다.");
         setIsSignupSuccess(true);
         setIsModalOpen(true);
-      } else if (response.status === 400) {
-        setModalMessage(`회원가입 실패: ${data.email}`);
-        setIsSignupSuccess(false);
-        setIsModalOpen(true);
       }
     } catch (error) {
-      setModalMessage("오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+      if (error.response && error.response.status === 400) {
+        setModalMessage(`회원가입 실패: ${error.response.data.email}`);
+      } else {
+        setModalMessage("오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+      }
       setIsSignupSuccess(false);
       setIsModalOpen(true);
     }
