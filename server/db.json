@@ -59,9 +59,9 @@
     {
       "id": 3,
       "name": "한우 사태",
-      "weight": 700,
+      "weight": 1400,
       "origin": "국내산 한우",
-      "price": 45000,
+      "price": 130000,
       "part": "사태",
       "usage": "요리용",
       "storage": "냉장",
