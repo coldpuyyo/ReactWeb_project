@@ -1,10 +1,10 @@
 import React from "react"; // React 라이브러리 불러오기
-import { 
-  CategoryContainer, 
-  CategoryItem, 
-  Circle, 
-  CategoryImage, 
-  CategoryText 
+import {
+  CategoryContainer,
+  CategoryItem,
+  Circle,
+  CategoryImage,
+  CategoryText
 } from "../styles/CategoryMenuStyles"; // 스타일 파일에서 필요한 요소 불러오기
 import { ContentWrapper } from "../styles/commonStyles"; // 공통 스타일 불러오기
 

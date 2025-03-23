@@ -7,13 +7,12 @@ export const NoticeContainer = styled.div`
   background-color: #f6f6f6; /* 배경색 (연한 회색) */
   padding: 12px 16px;
   border-radius: 8px;
-  max-width: 600px;
   margin: 10px auto; /* 가운데 정렬 */
 `;
 
-/* 🏷️ 아이콘 스타일 */
+/* 확성기 아이콘 스타일 */
 export const NoticeIcon = styled.span`
-  color: #ff7f50; /* 오렌지 색상 */
+  color: #ff7f50;
   font-size: 18px;
   margin-right: 10px;
 `;

@@ -1,47 +1,45 @@
-import React from "react";
-import { ProductContainer, ProductItem } from "../styles/ProductListStyles";
+import React, { useState, useEffect } from "react";
+import { ProductContainer, ProductItem, DetailButton, ImageWrapper, ProductImage} from "../styles/ProductListStyles";
 import { ContentWrapper } from "../styles/commonStyles";
+import axios from "axios";
 
-// 🏷️ 상품 데이터 (예제 이미지)
-const products = [
-  "https://cdn.sirloin.co.kr/images/product/62bbd64790ce53452e5f6a2a/represent/%EC%83%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EC%95%99_%EC%84%A4_%EC%8D%B8_1_%EC%88%98%EC%A0%95.jpg",
-  "https://placehold.co/150x150",
-  "https://placehold.co/150x150",
-  "https://placehold.co/150x150",
-  "https://placehold.co/150x150",
-  "https://placehold.co/150x150",
-  "https://placehold.co/150x150", // 7번째 상품 (숨겨짐)
-  "https://placehold.co/150x150", // 8번째 상품 (숨겨짐)
-];
-
-// 🏷️ 상품 리스트 컴포넌트
 const ProductList = () => {
-  // const { id } = useParams();
-  // const [gogiData, setGogiData] = useState(null);
+  const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get("http://localhost:3000/gogiInfo")
-  //     .then((response) => {
-  //       const product = response.data.find((item) => Number(item.id) === Number(id));
-  //       setGogiData(product || null);
-  //     })
-  //     .catch((error) => {
-  //       console.error("데이터 안불러짐 콘솔 확인:", error);
-  //     });
-  // }, [id]);
-
-  // if (!gogiData) {
-  //   return <p>이미 삭제되었거나 없는 상품입니다.</p>;
-
+  useEffect(() => {
+    axios.get("http://localhost:3001/gogiInfo") // 실제 API URL 입력
+      .then((response) => response.data)
+      .then((data) => {
+        console.log("API 데이터:", data); // 데이터가 정상적으로 불러와지는지 확인
+        if (data && data.length > 0) {
+          setProducts(data.slice(0, 6)); // 최대 6개까지만 가져오기
+        } else {
+          console.error("API 응답에 gogiInfo가 없음.");
+        }
+      })
+      .catch((error) => console.error("데이터 로딩 실패:", error));
+  }, []);
 
   return (
     <ContentWrapper>
       <ProductContainer>
-        {products.slice(0, 6).map((img, index) => ( // 상위 6개만 표시
-          <ProductItem key={index}>
-            <img src={img} alt={`상품 ${index + 1}`} />
-          </ProductItem>
-        ))}
+        {products.length > 0 ? (
+          products.map((product) => (
+            <ProductItem key={product.id}>
+              <ImageWrapper>
+              {product.images && product.images.length > 0 ? (
+                <ProductImage src={product.images[0].url} alt={`상품 ${product.id}`} />
+              ) : (
+                <ProductImage src="https://placehold.co/150x220?text=No+Image" alt="기본 이미지" />
+              )}
+              <DetailButton>{"상세보기"}</DetailButton>
+              </ImageWrapper>
+              <strong>{product.name}</strong>
+            </ProductItem>
+          ))
+        ) : (
+          <p>상품이 없습니다.</p> // 데이터가 없을 경우 안내 메시지 표시
+        )}
       </ProductContainer>
     </ContentWrapper>
   );
