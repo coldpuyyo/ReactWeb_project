@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
     const isLoggedIn = sessionStorage.getItem("token") !== null;
-    const navigate = useNavigate();zz
+    const navigate = useNavigate();
 
     const goHome = () => {
         navigate('/home')
