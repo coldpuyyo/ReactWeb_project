@@ -8,7 +8,7 @@ const ProductList = () => {
 
   useEffect(() => {
     axios.get("http://localhost:3001/gogiInfo") // 실제 API URL 입력
-      .then((response) => response.json())
+      .then((response) => response.data)
       .then((data) => {
         console.log("API 데이터:", data); // 데이터가 정상적으로 불러와지는지 확인
         if (data && data.length > 0) {
