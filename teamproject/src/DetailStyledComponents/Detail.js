@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DetailContentWrapper = styled.div`
   display: grid;
-  height: 600px;
+  height: 650px;
   border: 2px;
   border-radius: 10px;
   grid-column: 3/5;
@@ -63,7 +63,7 @@ export const Goginame = styled.div`
 export const DetailConWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
+  width:80%;
   max-width: 800px;
   margin: auto;
   gap: 5px;
@@ -108,6 +108,7 @@ export const TabWrapper = styled.div`
 `;
 
 export const TabButton = styled.button`
+margin-top: 10px;
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -115,7 +116,7 @@ export const TabButton = styled.button`
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  min-width: 120px;
+  width: 100x;
 
   &:hover {
     background: #ddd;

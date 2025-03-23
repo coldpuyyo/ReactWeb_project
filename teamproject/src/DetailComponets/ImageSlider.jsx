@@ -26,7 +26,6 @@ const ImageSlider = ({ images }) => {
         <>
             <ImageWrapper>
                 <SlideImage className={fade ? "fade" : ""} src={images[currentIndex].url} alt={`Product ${currentIndex + 1}`} />
-                <button>구매하기</button>
             </ImageWrapper>
         </>
 

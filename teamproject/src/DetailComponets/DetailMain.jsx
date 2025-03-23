@@ -55,12 +55,12 @@ const DetailMain = () => {
             </HeaderWrapper>
 
             <Div1 />
-
             <DetailContentWrapper>
 
                 <ImageSlider images={gogiData.images} />
 
                 <DetailInfo gogi={gogiData} />
+            <button>장바구니에 담기</button>
 
                 <DetailConContainer review={gogiAndReview} />
 
