@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DetailContentWrapper = styled.div`
   display: grid;
-  height: 600px;
+  height: 650px;
   border: 2px;
   border-radius: 10px;
   grid-column: 3/5;
@@ -10,6 +10,7 @@ export const DetailContentWrapper = styled.div`
   padding: 20px;
   min-width: 500px;
   background-color:#ff8a8a;
+  justify-content: center;
 `;
 
 
@@ -26,10 +27,6 @@ export const Div2 = styled.div`
   height: 200px;
 `;
 
-export const ImageWrapper = styled.div`
-margin-left:40px;
-
-`;
 
 export const SlideImage = styled.img`
   width: auto;
@@ -63,7 +60,7 @@ export const Goginame = styled.div`
 export const DetailConWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
+  width:80%;
   max-width: 800px;
   margin: auto;
   gap: 5px;
@@ -108,6 +105,7 @@ export const TabWrapper = styled.div`
 `;
 
 export const TabButton = styled.button`
+margin-top: 10px;
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -115,7 +113,7 @@ export const TabButton = styled.button`
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  min-width: 120px;
+  width: 100px;
 
   &:hover {
     background: #ddd;
@@ -131,6 +129,19 @@ export const ContentWrapper = styled.div`
   font-size: 16px;
   font-weight: bold;
   min-height: 50px;
+`;
+
+export const BuyButton = styled.button`
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  justify-self: center;
+
+  &:hover {
+    background: #ddd;
+  }
 `;
 
 export const Content = styled.div``;

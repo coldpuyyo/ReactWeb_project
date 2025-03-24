@@ -20,14 +20,13 @@ const ImageSlider = ({ images }) => {
     if (!images || images.length === 0) {
         return <p>이미지가 없습니다.</p>;
     }
-    
+
 
     return (
         <>
-            <ImageWrapper>
-                <SlideImage className={fade ? "fade" : ""} src={images[currentIndex].url} alt={`Product ${currentIndex + 1}`} />
-                <button>구매하기</button>
-            </ImageWrapper>
+
+            <SlideImage className={fade ? "fade" : ""} src={images[currentIndex].url} alt={`Product ${currentIndex + 1}`} />
+
         </>
 
     );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { DetailContentWrapper, Div1, Div2 } from "../DetailStyledComponents/Detail";
+import { BuyButton, DetailContentWrapper, Div1, Div2, Wrapper } from "../DetailStyledComponents/Detail";
 import DetailConContainer from "./DetailContainer";
 import ImageSlider from "./ImageSlider";
 import DetailInfo from "./DetailInfo";
@@ -16,6 +16,8 @@ const DetailMain = () => {
     const [gogiData, setGogiData] = useState(null);
     const [reviewData, setReviewData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const isLoggedIn = sessionStorage.getItem("token") !== null;
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get("http://localhost:3001/gogiInfo")
@@ -28,8 +30,12 @@ const DetailMain = () => {
             });
     }, [id]);
 
-
-
+    const goLogin = () => {
+        navigate('/login')
+    };
+    const goCart = () => {
+        navigate('/cart')
+    };
 
     useEffect(() => {
         axios.get("http://localhost:3001/review")
@@ -55,12 +61,13 @@ const DetailMain = () => {
             </HeaderWrapper>
 
             <Div1 />
-
             <DetailContentWrapper>
 
                 <ImageSlider images={gogiData.images} />
 
                 <DetailInfo gogi={gogiData} />
+                    
+                <BuyButton onClick={isLoggedIn ? goCart : goLogin}>장바구니에 담기</BuyButton>
 
                 <DetailConContainer review={gogiAndReview} />
 
