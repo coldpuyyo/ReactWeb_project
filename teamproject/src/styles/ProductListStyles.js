@@ -29,7 +29,6 @@ export const ProductItem = styled.div`
   width: 100%;
   height: 250px;
   overflow: hidden;
-  cursor: pointer;
   flex-direction: column; /* 세로 정렬 */
   
 
