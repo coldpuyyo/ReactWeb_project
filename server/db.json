@@ -211,19 +211,67 @@
   ],
   "review": [
     {
-        "id": 1,
-        "clientId": "3191",
-        "gogiId": 1,
-        "reviewText": "고기가 부드러워요",
-        "star": 5
+      "id": 1,
+      "clientId": "3191",
+      "gogiId": 1,
+      "reviewText": "고기가 부드러워요",
+      "star": 5
     }
   ],
   "cart": [
     {
-      "id":1,
-      "clientId":"3191",
-      "gogiId":1
-      
-  }
-]
+      "id": "ef79",
+      "clientId": "3191",
+      "gogiId": 1,
+      "quantity": 4
+    },
+    {
+      "id": "13ec",
+      "clientId": "3191",
+      "gogiId": 2,
+      "quantity": 4
+    },
+    {
+      "id": "dd74",
+      "clientId": "3191",
+      "gogiId": 3,
+      "quantity": 1
+    },
+    {
+      "id": "1af8",
+      "clientId": "3191",
+      "gogiId": 6,
+      "quantity": 1
+    },
+    {
+      "id": "2be4",
+      "clientId": "3191",
+      "gogiId": 4,
+      "quantity": 1
+    },
+    {
+      "id": "6620",
+      "clientId": "6f48",
+      "gogiId": 2,
+      "quantity": 1
+    },
+    {
+      "id": "716f",
+      "clientId": "6f48",
+      "gogiId": 3,
+      "quantity": 2
+    },
+    {
+      "id": "752e",
+      "clientId": "6f48",
+      "gogiId": 6,
+      "quantity": 1
+    },
+    {
+      "id": "9a45",
+      "clientId": "6f48",
+      "gogiId": 4,
+      "quantity": 1
+    }
+  ]
 }
