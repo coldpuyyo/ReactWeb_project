@@ -37,8 +37,6 @@ const DetailMain = () => {
         navigate('/cart')
     };
 
-
-
     useEffect(() => {
         axios.get("http://localhost:3001/review")
             .then((response) => {
