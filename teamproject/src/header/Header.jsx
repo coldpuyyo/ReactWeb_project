@@ -15,8 +15,7 @@ function Header() {
     };
     const goMypage = () => {
         navigate('/mypage')
-    }
-        ;
+    };
 
     return (
         <>

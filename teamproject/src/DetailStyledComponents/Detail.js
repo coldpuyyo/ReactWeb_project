@@ -10,6 +10,7 @@ export const DetailContentWrapper = styled.div`
   padding: 20px;
   min-width: 500px;
   background-color:#ff8a8a;
+  justify-content: center;
 `;
 
 
@@ -26,10 +27,6 @@ export const Div2 = styled.div`
   height: 200px;
 `;
 
-export const ImageWrapper = styled.div`
-margin-left:40px;
-
-`;
 
 export const SlideImage = styled.img`
   width: auto;
@@ -116,7 +113,7 @@ margin-top: 10px;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  width: 100x;
+  width: 100px;
 
   &:hover {
     background: #ddd;
@@ -132,6 +129,19 @@ export const ContentWrapper = styled.div`
   font-size: 16px;
   font-weight: bold;
   min-height: 50px;
+`;
+
+export const BuyButton = styled.button`
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  justify-self: center;
+
+  &:hover {
+    background: #ddd;
+  }
 `;
 
 export const Content = styled.div``;
