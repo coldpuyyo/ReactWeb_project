@@ -19,7 +19,7 @@
   ],
   "gogiInfo": [
     {
-      "id": 1,
+      "id": "1",
       "name": "사토브리앙",
       "weight": 600,
       "origin": "국내산 한우",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "안심슬라이스",
       "weight": 300,
       "origin": "국내산 한우",
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "한우 사태",
       "weight": 1400,
       "origin": "국내산 한우",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "살치살",
       "weight": 200,
       "origin": "국내산 한우",
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "꽃새우살",
       "weight": 400,
       "origin": "국내산 한우",
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "안창살",
       "weight": 200,
       "origin": "국내산 한우",
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "토시살",
       "weight": 200,
       "origin": "국내산 한우",
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "사토브리앙",
       "weight": 750,
       "origin": "국내산 한우",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "사토브리앙",
       "weight": 650,
       "origin": "국내산 한우",
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "사토브리앙",
       "weight": 500,
       "origin": "국내산 한우",
@@ -211,19 +211,65 @@
   ],
   "review": [
     {
-        "id": 1,
-        "clientId": "3191",
-        "gogiId": 1,
-        "reviewText": "고기가 부드러워요",
-        "star": 5
+      "id": "1",
+      "clientId": "3191",
+      "gogiId": 1,
+      "reviewText": "고기가 부드러워요",
+      "star": 5
     }
   ],
   "cart": [
     {
-      "id":1,
-      "clientId":"3191",
-      "gogiId":1
-      
-  }
-]
+      "id": "6c54",
+      "clientId": "6f48",
+      "gogiId": "5",
+      "quantity": 2
+    },
+    {
+      "id": "18f9",
+      "clientId": "6f48",
+      "gogiId": "4",
+      "quantity": 1
+    },
+    {
+      "id": "117b",
+      "clientId": "3191",
+      "gogiId": "5",
+      "quantity": 1
+    }
+  ],
+  "purchaseList": [
+    {
+      "id": "1",
+      "clientId": "3191",
+      "gogiId": "2",
+      "quantity": 1,
+      "purchaseDate": "2021-07-01",
+      "status": "배송중"
+    },
+    {
+      "id": "2",
+      "clientId": "6f48",
+      "gogiId": "5",
+      "quantity": 2,
+      "purchaseDate": "2021-07-02",
+      "status": "배송중"
+    },
+    {
+      "id": "3",
+      "clientId": "6f48",
+      "gogiId": "4",
+      "quantity": 1,
+      "purchaseDate": "2021-07-03",
+      "status": "배송중"
+    },
+    {
+      "id": "4",
+      "clientId": "3191",
+      "gogiId": "5",
+      "quantity": 1,
+      "purchaseDate": "2021-07-04",
+      "status": "배송중"
+    }
+  ]
 }

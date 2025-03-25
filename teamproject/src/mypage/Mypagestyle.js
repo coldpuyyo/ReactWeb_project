@@ -79,6 +79,10 @@ export const MyCart = styled.div`
     }
 `
 
+export const CartLink = styled.link`
+    text-decoration: none;
+`;
+
 export const Myshoping = styled.div`
     display: flex;
     flex-direction: column;

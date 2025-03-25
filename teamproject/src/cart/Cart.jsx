@@ -5,9 +5,9 @@ import Header from "../header/Header";
 import { HeaderWrapper } from "../header/HeaderStyle";
 import { MainContainer } from "../MainContainerGrid";
 import { FooterWrapper } from "../styles/FooterStyles";
-import { CartWrapper, Img } from "./CartStyle";
+import { BuyButton, Card, CartWrapper, Img, KeepshopButton, Text } from "./CartStyle";
 import axios from "axios";
-import MeatName from "./MeatName";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -16,7 +16,7 @@ const Cart = () => {
 
     useEffect(() => {
         const fetchClientId = () => {
-            const userEmail = sessionStorage.getItem("email"); // 🔥 로그인한 유저의 이메일 가져오기
+            const userEmail = sessionStorage.getItem("email");
             if (!userEmail) {
                 console.error("로그인 정보 없음");
                 setLoading(false);
@@ -27,7 +27,7 @@ const Cart = () => {
                 .then(response => {
                     const loggedInUser = response.data.find(client => client.email === userEmail);
                     if (loggedInUser) {
-                        setClientId(loggedInUser.id); // 🔥 clientId 저장
+                        setClientId(loggedInUser.id);
                     } else {
                         console.error("해당 email의 회원 없음");
                         setLoading(false);
@@ -43,7 +43,7 @@ const Cart = () => {
     }, []);
 
     useEffect(() => {
-        if (!clientId) return; // 🔥 clientId가 설정되지 않으면 실행 X
+        if (!clientId) return;
 
         const fetchCartData = () => {
             axios.get("http://localhost:3001/cart")
@@ -63,9 +63,17 @@ const Cart = () => {
                         .then(gogiResponse => {
                             console.log("고기 데이터:", gogiResponse.data);
 
-                            const items = userCart.map(cartItem =>
-                                gogiResponse.data.find(gogi => gogi.id === cartItem.gogiId)
-                            ).filter(Boolean); // null 값 제거
+                            const items = userCart.map(cartItem => {
+                                const gogi = gogiResponse.data.find(gogi => gogi.id === cartItem.gogiId);
+                                if (gogi) {
+                                    return { 
+                                        ...gogi, 
+                                        quantity: cartItem.quantity, 
+                                        cartItemId: cartItem.id  // 🔥 cartItem의 id 저장 (삭제에 필요)
+                                    }; 
+                                }
+                                return null;
+                            }).filter(Boolean);
 
                             setCartItems(items);
                             setLoading(false);
@@ -79,17 +87,32 @@ const Cart = () => {
                     console.error("장바구니 데이터 불러오기 오류:", error);
                     setLoading(false);
                 });
+
         };
 
         fetchCartData();
     }, [clientId]);
+
+    // 🔥 삭제 버튼 클릭 시 해당 아이템 삭제
+    const handleDelete = (cartItemId) => {
+        axios.delete(`http://localhost:3001/cart/${cartItemId}`)
+            .then(() => {
+                console.log(`✅ 장바구니 아이템 삭제 완료: ${cartItemId}`);
+                setCartItems(prevItems => prevItems.filter(item => item.cartItemId !== cartItemId));
+                alert("상품이 장바구니에서 삭제되었습니다.");
+            })
+            .catch(error => {
+                console.error("❌ 장바구니 아이템 삭제 오류:", error);
+            });
+    };
 
     if (loading) {
         return <p>Loading...</p>;
     }
 
     if (cartItems.length === 0) {
-        return <p>장바구니가 비어 있습니다.</p>;
+        return <Link to="../home/"><button>홈으로</button></Link>;
+    
     }
 
     return (
@@ -101,13 +124,17 @@ const Cart = () => {
                 <Div1 />
                 <CartWrapper>
                     {cartItems.map((gogi) => (
-                        <div key={gogi.id}>
+                        <Card key={gogi.cartItemId}> {/* 🔥 cartItemId 사용 */}
                             <Img src={gogi.images?.[0]?.url} alt={gogi.name} />
-                            <MeatName gogi={gogi} />
-                            <button>삭제</button>
-                        </div>
+                            <Text>{gogi.name}</Text>
+                            <Text>{gogi.price}원</Text>
+                            <Text>{gogi.quantity} 개</Text>
+                            <button onClick={() => handleDelete(gogi.cartItemId)}>삭제</button> {/* 🔥 삭제 버튼 */}
+                        </Card>
                     ))}
                 </CartWrapper>
+                <KeepshopButton>쇼핑 계속하기</KeepshopButton>
+                <BuyButton>구매</BuyButton>
                 <Div2 />
                 <FooterWrapper>
                     <Footer />
