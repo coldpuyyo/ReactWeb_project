@@ -5,7 +5,7 @@ import Header from "../header/Header";
 import { HeaderWrapper } from "../header/HeaderStyle";
 import { MainContainer } from "../MainContainerGrid";
 import { FooterWrapper } from "../styles/FooterStyles";
-import { Button, Card, CartWrapper, Img, Text } from "./CartStyle";
+import { BuyButton, Card, CartWrapper, Img, KeepshopButton, Text } from "./CartStyle";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -129,10 +129,12 @@ const Cart = () => {
                             <Text>{gogi.name}</Text>
                             <Text>{gogi.price}원</Text>
                             <Text>{gogi.quantity} 개</Text>
-                            <Button onClick={() => handleDelete(gogi.cartItemId)}>삭제</Button> {/* 🔥 삭제 버튼 */}
+                            <button onClick={() => handleDelete(gogi.cartItemId)}>삭제</button> {/* 🔥 삭제 버튼 */}
                         </Card>
                     ))}
                 </CartWrapper>
+                <KeepshopButton>쇼핑 계속하기</KeepshopButton>
+                <BuyButton>구매</BuyButton>
                 <Div2 />
                 <FooterWrapper>
                     <Footer />

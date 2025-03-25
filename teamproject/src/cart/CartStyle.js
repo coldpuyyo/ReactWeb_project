@@ -42,5 +42,29 @@ export const Img = styled.img`
     opacity: 0;
   }
 `;
-export const Button = styled.button`
+
+export const KeepshopButton = styled.button`
+margin-top: 15px;
+ display: grid;
+ grid-row: 6;
+ grid-column: 2;
+ height: 40px;
+ justify-self: start;
+ width: 200px;
+ border-radius: 10px;
+ border-style: none;
+ align-items: center;
+`;
+
+export const BuyButton = styled.button`
+margin-top: 15px;
+ display: grid;
+ grid-row: 6;
+ grid-column: 5;
+ height: 40px;
+ justify-self: end;
+ width: 200px;
+ border-radius: 10px;
+ border-style: none;
+ align-items: center;
 `;
