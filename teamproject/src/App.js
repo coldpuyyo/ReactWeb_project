@@ -4,7 +4,6 @@ import Login from './login/Login';
 import DetailMain from './DetailComponets/DetailMain';
 import Signup from './signup/Signup';
 import Home from "./pages/Home";
-import Meat_All from './meat_all/Meat_All';
 import Mypage from './mypage/Mypage';
 import Cart from './cart/Cart';
 import PurchaseList from './purchasList/PurchasList';
@@ -46,7 +45,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/meat_all" element={<Meat_All />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/mypage" element={<Mypage />} />
