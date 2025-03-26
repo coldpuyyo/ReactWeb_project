@@ -230,12 +230,6 @@
       "clientId": "6f48",
       "gogiId": "4",
       "quantity": 1
-    },
-    {
-      "id": "117b",
-      "clientId": "3191",
-      "gogiId": "5",
-      "quantity": 1
     }
   ],
   "purchaseList": [
@@ -269,6 +263,38 @@
       "gogiId": "5",
       "quantity": 1,
       "purchaseDate": "2021-07-04",
+      "status": "배송중"
+    },
+    {
+      "id": "2130",
+      "clientId": "3191",
+      "gogiId": "5",
+      "quantity": 1,
+      "purchaseDate": "2025-03-26",
+      "status": "배송중"
+    },
+    {
+      "id": "79fb",
+      "clientId": "3191",
+      "gogiId": "1",
+      "quantity": 1,
+      "purchaseDate": "2025-03-26",
+      "status": "배송중"
+    },
+    {
+      "id": "7f2a",
+      "clientId": "3191",
+      "gogiId": "1",
+      "quantity": 1,
+      "purchaseDate": "2025-03-26",
+      "status": "배송중"
+    },
+    {
+      "id": "6bfb",
+      "clientId": "3191",
+      "gogiId": "2",
+      "quantity": 1,
+      "purchaseDate": "2025-03-26",
       "status": "배송중"
     }
   ]
