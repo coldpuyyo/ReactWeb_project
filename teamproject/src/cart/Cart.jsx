@@ -17,7 +17,7 @@ const Cart = () => {
     const navigate = useNavigate();
 
     const goMeatAll = () => {   // 쇼핑 계속하기 버튼 클릭 시
-        navigate("/meat_all");
+        navigate("/all");
     };
 
     useEffect(() => {

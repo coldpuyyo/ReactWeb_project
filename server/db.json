@@ -15,6 +15,14 @@
       "nickname": "asdf",
       "name": "a",
       "phone": "010-0000-0000"
+    },
+    {
+      "id": "e8d6",
+      "email": "gasd@g.com",
+      "password": "qntleh378@",
+      "nickname": "kkm2",
+      "name": "kkm",
+      "phone": "010-0000-0000"
     }
   ],
   "gogiInfo": [
@@ -294,6 +302,14 @@
       "clientId": "3191",
       "gogiId": "2",
       "quantity": 1,
+      "purchaseDate": "2025-03-26",
+      "status": "배송중"
+    },
+    {
+      "id": "8909",
+      "clientId": "3191",
+      "gogiId": "2",
+      "quantity": 3,
       "purchaseDate": "2025-03-26",
       "status": "배송중"
     }
