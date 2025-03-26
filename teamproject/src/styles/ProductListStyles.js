@@ -37,7 +37,7 @@ export const ProductItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:rgb(255, 79, 240);
+  background-color:rgb(255, 230, 253);
   border-radius: 8px;
   height: 250px;
   overflow: hidden;
