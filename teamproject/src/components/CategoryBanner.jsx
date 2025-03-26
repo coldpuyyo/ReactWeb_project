@@ -1,6 +1,6 @@
 import React from "react";
 // 스타일 컴포넌트 임포트
-import { CategoryBannerContainer, CategoryBannerImage } from "../styles/CategoryBannerStyles";
+import { CategoryBannerContainer, CategoryBannerImage, SelfExhibition } from "../styles/CategoryBannerStyles";
 // Swiper 관련 컴포넌트 임포트
 import { Swiper, SwiperSlide } from "swiper/react";
 // Swiper CSS 임포트
@@ -20,7 +20,7 @@ const categoryBannerImages = [
 const CategoryBanner = () => {
   return (
     <CategoryBannerContainer>
-      <p>자체기획전</p> {/* 배너 제목 */}
+      <SelfExhibition>자체기획전</SelfExhibition> {/* 배너 제목 */}
 
       <Swiper
         modules={[Pagination, Autoplay]} // 사용할 Swiper 모듈

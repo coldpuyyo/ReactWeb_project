@@ -1,5 +1,5 @@
 import React from "react";
-import { BannerContainer } from "../styles/BannerStyles"; // 배너 스타일 가져오기
+import { BannerContainer, Exhibition } from "../styles/BannerStyles"; // 배너 스타일 가져오기
 import { Swiper, SwiperSlide } from "swiper/react"; // Swiper(슬라이더) 라이브러리 가져오기
 import "swiper/css"; // Swiper 기본 스타일 가져오기
 import "swiper/css/pagination"; // Swiper 페이지네이션 스타일 가져오기
@@ -19,7 +19,7 @@ const Banner = () => {
   return (
     <BannerContainer>
       {/* Swiper 슬라이더 */}
-      <div><p>협업기획전</p></div> {/* 배너 제목 */}
+      <Exhibition><p>협업기획전</p></Exhibition> {/* 배너 제목 */}
       <Swiper
         modules={[Pagination, Autoplay]} // 페이지네이션 & 자동재생 기능 추가
         pagination={{ clickable: true }} // 페이지네이션 클릭 가능 설정
