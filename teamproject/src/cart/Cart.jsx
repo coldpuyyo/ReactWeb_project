@@ -7,12 +7,18 @@ import { MainContainer } from "../MainContainerGrid";
 import { FooterWrapper } from "../styles/FooterStyles";
 import { BuyButton, Card, CartWrapper, Img, KeepshopButton, Text } from "./CartStyle";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [clientId, setClientId] = useState(null); // 로그인한 유저 ID 저장
+
+    const navigate = useNavigate();
+
+    const goMeatAll = () => {   // 쇼핑 계속하기 버튼 클릭 시
+        navigate("/meat_all");
+    };
 
     useEffect(() => {
         const fetchClientId = () => {
@@ -66,11 +72,11 @@ const Cart = () => {
                             const items = userCart.map(cartItem => {
                                 const gogi = gogiResponse.data.find(gogi => gogi.id === cartItem.gogiId);
                                 if (gogi) {
-                                    return { 
-                                        ...gogi, 
-                                        quantity: cartItem.quantity, 
+                                    return {
+                                        ...gogi,
+                                        quantity: cartItem.quantity,
                                         cartItemId: cartItem.id  // 🔥 cartItem의 id 저장 (삭제에 필요)
-                                    }; 
+                                    };
                                 }
                                 return null;
                             }).filter(Boolean);
@@ -105,14 +111,43 @@ const Cart = () => {
                 console.error("❌ 장바구니 아이템 삭제 오류:", error);
             });
     };
+    const handlePurchase = () => {
+        if (cartItems.length === 0) {
+            alert("장바구니가 비어 있습니다.");
+            return;
+        }
 
+        const purchaseData = cartItems.map(item => ({
+            clientId: clientId,
+            gogiId: item.id,
+            quantity: item.quantity,
+            purchaseDate: new Date().toISOString().split("T")[0], // YYYY-MM-DD 형식
+            status: "배송중",
+        }));
+
+        // purchaseList에 추가
+        axios.all(purchaseData.map(data => axios.post("http://localhost:3001/purchaseList", data)))
+            .then(() => {
+                console.log("✅ 구매 완료:", purchaseData);
+
+                // 장바구니에서 해당 항목 삭제
+                axios.all(cartItems.map(item => axios.delete(`http://localhost:3001/cart/${item.cartItemId}`)))
+                    .then(() => {
+                        console.log("✅ 장바구니 비우기 완료");
+                        setCartItems([]);
+                        alert("구매가 완료되었습니다.");
+                    })
+                    .catch(error => console.error("❌ 장바구니 삭제 오류:", error));
+            })
+            .catch(error => console.error("❌ 구매 요청 오류:", error));
+    };
     if (loading) {
         return <p>Loading...</p>;
     }
 
     if (cartItems.length === 0) {
         return <Link to="../home/"><button>홈으로</button></Link>;
-    
+
     }
 
     return (
@@ -133,8 +168,8 @@ const Cart = () => {
                         </Card>
                     ))}
                 </CartWrapper>
-                <KeepshopButton>쇼핑 계속하기</KeepshopButton>
-                <BuyButton>구매</BuyButton>
+                <KeepshopButton onClick={goMeatAll}>쇼핑 계속하기</KeepshopButton>
+                <BuyButton onClick={handlePurchase}>구매</BuyButton>
                 <Div2 />
                 <FooterWrapper>
                     <Footer />

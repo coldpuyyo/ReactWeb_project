@@ -46,7 +46,8 @@ const PurchaseList = () => {
 
         const fetchPurchaseData = async () => {
             try {
-                const purchaseResponse = await axios.get("http://localhost:3001/purchases");
+                // 변경된 API 호출 (purchaseList로)
+                const purchaseResponse = await axios.get("http://localhost:3001/purchaseList");
                 console.log("전체 구매 내역 데이터:", purchaseResponse.data);
 
                 const userPurchases = purchaseResponse.data.filter(item => item.clientId === clientId);
@@ -67,7 +68,8 @@ const PurchaseList = () => {
                         return {
                             ...gogi,
                             quantity: purchaseItem.quantity,
-                            purchaseDate: purchaseItem.date // 구매 날짜 추가
+                            purchaseDate: purchaseItem.purchaseDate, // purchaseDate가 여기서 가져와야 함
+                            status: purchaseItem.status // 배송 상태 추가
                         };
                     }
                     return null;
@@ -107,6 +109,7 @@ const PurchaseList = () => {
                             <Text>{gogi.price}원</Text>
                             <Text>{gogi.quantity} 개</Text>
                             <Text>구매 날짜: {gogi.purchaseDate}</Text>
+                            <Text>배송 상태: {gogi.status}</Text> {/* 배송 상태 표시 */}
                         </Card>
                     ))}
                 </CartWrapper>

@@ -16,6 +16,7 @@ const Mypage = () => {
     const [clientId, setClientId] = useState(null); // clientId 초기값 설정
     const [cartlength, setCartlength] = useState(0); // 개수를 저장할 변수
     const navigate = useNavigate();
+    const [purchaselength, setPurchaselength] = useState(0);
 
     const goCart = () => {
         navigate("/cart");
@@ -67,6 +68,33 @@ const Mypage = () => {
         fetchCartData();
     }, [clientId]);
 
+    useEffect(() => {
+        const fetchPurchaseData = async () => {
+            try {
+                if (!clientId) return;
+
+                const purchaseResponse = await axios.get("http://localhost:3001/purchaseList");
+                console.log("전체 구매 내역 데이터:", purchaseResponse.data);
+
+                const userPurchases = purchaseResponse.data.filter(item => item.clientId === clientId);
+                console.log("현재 유저의 구매 내역:", userPurchases);
+
+                if (userPurchases.length === 0) {
+                    setPurchaselength(0);
+                    return;
+                }
+
+                setPurchaselength(userPurchases.length);
+                console.log("구매 내역 개수:", userPurchases.length);
+            } catch (error) {
+                console.error("구매 내역 데이터를 불러오는 중 오류 발생:", error);
+                setPurchaselength(0);
+            }
+        };
+
+        fetchPurchaseData();
+    }, [clientId]);
+
     return (
         <>
             <MainContainer>
@@ -88,7 +116,7 @@ const Mypage = () => {
                                 <br />
                                 <span>
                                     <FontAwesomeIcon icon={faChevronRight} />
-                                    &nbsp;0건
+                                    &nbsp;{purchaselength}건
                                 </span>
                             </MyOrder>
                             <MyCart onClick={goCart}>장바구니

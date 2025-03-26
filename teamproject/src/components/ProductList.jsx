@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ProductContainer, ProductItem, DetailButton, ImageWrapper, ProductImage } from "../styles/ProductListStyles";
-import { ContentWrapper } from "../styles/commonStyles";
+import { ProductWrapper, ProductContainer, ProductItem, DetailButton, ImageWrapper, ProductImage } from "../styles/ProductListStyles";
 import axios from "axios";
 import { Link } from "react-router-dom"; // React Router에서 Link 가져오기
 
@@ -8,7 +7,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-     axios.get("http://localhost:3001/gogiInfo") // 실제 API URL 입력
+    axios.get("http://localhost:3001/gogiInfo") // 실제 API URL 입력
       .then((response) => response.data)
       .then((data) => {
         console.log("API 데이터:", data); // 데이터가 정상적으로 불러와지는지 확인
@@ -22,7 +21,7 @@ const ProductList = () => {
   }, []);
 
   return (
-    <ContentWrapper>
+    <ProductWrapper>
       <ProductContainer>
         {products.length > 0 ? (
           products.map((product) => (
@@ -44,7 +43,7 @@ const ProductList = () => {
           <p>상품이 없습니다.</p>
         )}
       </ProductContainer>
-    </ContentWrapper>
+    </ProductWrapper>
   );
 };
 

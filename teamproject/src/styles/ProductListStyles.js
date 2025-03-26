@@ -1,11 +1,22 @@
 import styled from "styled-components";
 
+export const ProductWrapper = styled.div`
+  width: 100%;
+  padding: 30x;
+  align-items: center; /* 중앙 정렬 */
+  justify-content: center; /* 가운데 정렬 */
+`;
+
+
 /* 🏷️ 상품 리스트 컨테이너 */
 export const ProductContainer = styled.div`
+  
+  justify-content: center;
+  max-width: 900px;  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;     /*상품사이공간*/
-  padding: 15px;  /*카테고리배너사이공간*/
+  padding: 30px;  /*카테고리배너사이공간*/
   width: 100%;
   margin: 0 auto;
 
@@ -16,6 +27,8 @@ export const ProductContainer = styled.div`
   @media (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  
 `;
 
 /* 🏷️ 상품 아이템 */
@@ -24,31 +37,15 @@ export const ProductItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:rgb(240, 171, 169);
+  background-color:rgb(255, 230, 253);
   border-radius: 8px;
-  width: 100%;
   height: 250px;
   overflow: hidden;
   flex-direction: column; /* 세로 정렬 */
-  
+  box-shadow: 1px 1px 2px 2px #555555
 
   
 
-  /* 🏷️ 오버레이 (배경 어둡게) */
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0); /* 기본 상태는 투명 */
-    transition: background 0.3s ease-in-out;
-  }
-
-  &:hover::before {
-    background: rgba(0, 0, 0, 0.6); /* 호버 시 어두워짐 */
-  }
 `;
 /* 🏷️ 이미지 스타일 */
 export const ProductImage = styled.img`
@@ -99,7 +96,7 @@ export const DetailButton = styled.button`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.9);
+  background-color:rgb(240, 171, 169);
   border: none;
   padding: 12px 20px;
   font-size: 16px;
