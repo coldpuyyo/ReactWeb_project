@@ -39,10 +39,13 @@ const ModalButton = styled.button`
 `;
 
 const Modal = ({ message, onClose, onConfirm }) => {
+  // \n을 <br />로 바꾸는 방법
+  const formattedMessage = message.replace(/\n/g, "<br />");
+
   return (
     <ModalBackground>
       <ModalContainer>
-        <p>{message}</p>
+        <p dangerouslySetInnerHTML={{ __html: formattedMessage }}></p>
         <ModalButton onClick={() => {
             if (onConfirm) onConfirm();
             onClose();
