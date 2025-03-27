@@ -9,24 +9,39 @@ export const DetailContentWrapper = styled.div`
   grid-row: 3/6;
   padding: 20px;
   min-width: 500px;
-  background-color:#ff8a8a;
+  background-color: #ff8a8a;
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    height: auto;
+    grid-column: 1/3; /* 작은 화면에서는 왼쪽으로 이동 */
+    grid-row: 2/4;
+    min-width: 100%;
+  }
 `;
-
 
 export const Div1 = styled.div`
   display: grid;
   grid-row: 2;
   grid-column: 3/5;
   height: 200px;
+  
+  @media (max-width: 768px) {
+    grid-column: 1/3; /* 작은 화면에서 좌측으로 이동 */
+  }
 `;
+
 export const Div2 = styled.div`
   display: grid;
   grid-row: 6;
   grid-column: 3/5;
   height: 200px;
+  
+  @media (max-width: 768px) {
+    grid-column: 1/3;
+    grid-row: 4/5; /* 작은 화면에서 위치 조정 */
+  }
 `;
-
 
 export const SlideImage = styled.img`
   width: auto;
