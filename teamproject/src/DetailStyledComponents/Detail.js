@@ -9,24 +9,39 @@ export const DetailContentWrapper = styled.div`
   grid-row: 3/6;
   padding: 20px;
   min-width: 500px;
-  background-color:#ff8a8a;
+  background-color: #ff8a8a;
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    height: auto;
+    grid-column: 1/3; /* 작은 화면에서는 왼쪽으로 이동 */
+    grid-row: 2/4;
+    min-width: 100%;
+  }
 `;
-
 
 export const Div1 = styled.div`
   display: grid;
   grid-row: 2;
   grid-column: 3/5;
   height: 200px;
+  
+  @media (max-width: 768px) {
+    grid-column: 1/3; /* 작은 화면에서 좌측으로 이동 */
+  }
 `;
+
 export const Div2 = styled.div`
   display: grid;
   grid-row: 6;
   grid-column: 3/5;
   height: 200px;
+  
+  @media (max-width: 768px) {
+    grid-column: 1/3;
+    grid-row: 4/5; /* 작은 화면에서 위치 조정 */
+  }
 `;
-
 
 export const SlideImage = styled.img`
   width: auto;
@@ -42,28 +57,35 @@ export const SlideImage = styled.img`
 `;
 
 export const InfoWrapper = styled.div`
- display: grid;
- grid-template-columns: repeat(2,1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  grid-template-areas: 
-  "name name";
+  grid-template-areas: "name name";
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* 작은 화면에서 세로로 정렬 */
+  }
 `;
 
 export const Goginame = styled.div`
   grid-area: name;
-  font-style:italic;
+  font-style: italic;
 `;
-
 
 export const DetailConWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width:80%;
+  width: 80%;
   max-width: 800px;
   margin: auto;
   gap: 5px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* 작은 화면에서 세로로 정렬 */
+    gap: 20px;
+  }
 `;
 
 export const DetailConItem = styled.div`
@@ -88,13 +110,15 @@ export const DetailConContent = styled.div`
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 `;
 
-
-
 export const ToggleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const TabWrapper = styled.div`
@@ -102,10 +126,15 @@ export const TabWrapper = styled.div`
   justify-content: center;
   gap: 10px;
   margin-bottom: 10px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column; /* 작은 화면에서 세로로 배치 */
+    gap: 20px;
+  }
 `;
 
 export const TabButton = styled.button`
-margin-top: 10px;
+  margin-top: 10px;
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -129,6 +158,10 @@ export const ContentWrapper = styled.div`
   font-size: 16px;
   font-weight: bold;
   min-height: 50px;
+  
+  @media (max-width: 768px) {
+    width: 100%; /* 작은 화면에서 전체 너비 사용 */
+  }
 `;
 
 export const BuyButton = styled.button`
