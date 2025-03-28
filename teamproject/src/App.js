@@ -8,6 +8,7 @@ import Mypage from './mypage/Mypage';
 import Cart from './cart/Cart';
 import PurchaseList from './purchasList/PurchasList';
 import AllPage from './search/Allpage';
+import Myinfo from './myinfo/Myinfo';
 
 
 // function App() {
@@ -50,6 +51,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/mypage" element={<Mypage />} />
+          <Route path='/myinfo' element={<Myinfo />} />
           <Route path="/detail/:id" element={< DetailMain />} />
           <Route path="/purchasList" element={<PurchaseList />} />
           {/* <Route path = "/login_page" element ={<Login/>} /> */}

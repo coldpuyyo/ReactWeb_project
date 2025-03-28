@@ -104,7 +104,7 @@ const Mypage = () => {
                 <Div1 />
                 <MypageContainer>
                     <MyBox>
-                        <MyInfoButton type="submit">
+                        <MyInfoButton onClick={() => navigate("/myinfo")}>
                             안녕하세요 {userName}님&nbsp;
                             <FontAwesomeIcon icon={faChevronRight} />
                         </MyInfoButton>
