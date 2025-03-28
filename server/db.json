@@ -160,7 +160,7 @@
       "origin": "국내산 한우",
       "price": 49000,
       "part": "차돌박이",
-      "usage": "구이",
+      "usage": "구이용",
       "storage": "냉장",
       "shippingFee": 4000,
       "images": [
@@ -205,6 +205,142 @@
         {
           "id": 215,
           "url": "https://example.com/images/hanwoo10-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "한우치즈버거",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "간편식",
+      "usage": "혼합육",
+      "storage": "냉동",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 216,
+          "url": "https://i.imgur.com/znA3xdU.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "한우패티",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "간편식",
+      "usage": "구이용",
+      "storage": "냉동",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 217,
+          "url": "https://i.imgur.com/EdmWgyG.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "한우불고기",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "간편식",
+      "usage": "요리용",
+      "storage": "냉장",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 218,
+          "url": "https://i.imgur.com/2c1OdxM.png"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "우설",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "특수",
+      "usage": "구이용",
+      "storage": "냉동",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 219,
+          "url": "https://i.imgur.com/BekYSld.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "안심추리",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "특수",
+      "usage": "구이용",
+      "storage": "냉장",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 220,
+          "url": "https://i.imgur.com/IVCJmef.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "치마살",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "특수",
+      "usage": "구이용",
+      "storage": "냉장",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 221,
+          "url": "https://i.imgur.com/SUYRZEU.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "샘플 플레이트",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "특수",
+      "usage": "요리용",
+      "storage": "냉장",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 222,
+          "url": "https://i.imgur.com/W9qP2Kp.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "한우양지국거리",
+      "weight": 500,
+      "origin": "국내산 한우",
+      "price": 44000,
+      "part": "양지",
+      "usage": "요리용",
+      "storage": "냉장",
+      "shippingFee": 3800,
+      "images": [
+        {
+          "id": 219,
+          "url": "https://i.imgur.com/rUHlP3u.jpeg"
         }
       ]
     }
