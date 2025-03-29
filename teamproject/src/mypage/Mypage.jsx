@@ -134,8 +134,6 @@ const Mypage = () => {
                         <br />
                         <a href="#">나의 리뷰</a>
                         <br />
-                        <a href="#">전체 리뷰</a>
-                        <br />
                         <a href="#">배송지 목록</a>
                     </Myshoping>
                 </MypageContainer>
