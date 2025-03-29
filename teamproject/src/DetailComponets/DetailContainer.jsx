@@ -17,23 +17,31 @@ const DetailConContainer = ({ review }) => {
 
 
   const [indexControll, setIndexControll] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(pre => !pre);
+  }
 
   return (
-    <ToggleContainer>
+    <ToggleContainer isOpen={isOpen}>
       <TabWrapper>
         {InfoBar.map((good, index) => (
           <TabButton
             key={index}
             isActive={indexControll === index}
-            onClick={() => setIndexControll(index)}
+            onClick={() => {
+              setIndexControll(index);
+              handleToggle();
+            }}
           >
             {good.title}
-          </TabButton>
+          </TabButton >
         ))}
         <p>{review.text}</p>
       </TabWrapper>
 
-      <ContentWrapper>
+      <ContentWrapper isOpen={isOpen}>
         <Content>{InfoBar[indexControll].content}</Content>
       </ContentWrapper>
     </ToggleContainer>

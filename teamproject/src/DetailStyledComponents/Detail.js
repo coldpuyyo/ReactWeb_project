@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const MainContainer = styled.div`
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  height: 100vh;
+  background-color:rgb(255, 255, 255);
+  justify-items: center;
+`;
+
 export const DetailContentWrapper = styled.div`
   display: grid;
   height: 650px;
@@ -12,10 +21,10 @@ export const DetailContentWrapper = styled.div`
   background-color: #ff8a8a;
   justify-content: center;
   
-  @media (max-width: 768px) {
-    height: auto;
-    grid-column: 1/3; /* 작은 화면에서는 왼쪽으로 이동 */
-    grid-row: 2/4;
+  @media (max-width: 900px) {
+    height: 650px;
+    grid-column: 3/3; /* 작은 화면에서는 왼쪽으로 이동 */
+    grid-row: 3/4;
     min-width: 100%;
   }
 `;
@@ -26,9 +35,7 @@ export const Div1 = styled.div`
   grid-column: 3/5;
   height: 200px;
   
-  @media (max-width: 768px) {
-    grid-column: 1/3; /* 작은 화면에서 좌측으로 이동 */
-  }
+
 `;
 
 export const Div2 = styled.div`
@@ -37,10 +44,7 @@ export const Div2 = styled.div`
   grid-column: 3/5;
   height: 200px;
   
-  @media (max-width: 768px) {
-    grid-column: 1/3;
-    grid-row: 4/5; /* 작은 화면에서 위치 조정 */
-  }
+  
 `;
 
 export const SlideImage = styled.img`
@@ -120,6 +124,7 @@ export const TabWrapper = styled.div`
 `;
 
 export const TabButton = styled.button`
+
 margin-top: 10px;
   padding: 10px 20px;
   border: 1px solid #ccc;
@@ -134,16 +139,19 @@ margin-top: 10px;
     background: #ddd;
   }
 `;
-
 export const ContentWrapper = styled.div`
-  width: calc(120px * 3 + 20px * 2);
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  overflow: hidden;
+  width: 300px; /* ContentWrapper의 너비 설정 */
+  height: 650px; /* DetailContentWrapper와 동일한 높이로 설정 */
   border: 1px solid #ccc;
   padding: 20px;
   background: #fff;
   text-align: center;
   font-size: 16px;
   font-weight: bold;
-  min-height: 50px;
+  grid-column: 4 / 7; /* 4번에서 6번 열까지 차지 */
+  flex-shrink: 0; /* ContentWrapper가 축소되지 않도록 설정 */
 `;
 
 export const BuyButton = styled.button`
@@ -159,4 +167,6 @@ export const BuyButton = styled.button`
   }
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+
+`;
